@@ -136,7 +136,7 @@
 <script type="text/javascript" src="<%=contextPath%>/common/js/lazyloader.js"></script>
 <script type="text/javascript">
 $(function(){
-	$("#iframe0").attr("src", "<%=contextPath %>/system/frame/xfj/main.jsp");
+	$("#iframe0").attr("src", "<%=contextPath %>/system/core/docType/index.jsp");
 });
 var loader;
 
@@ -152,6 +152,19 @@ function  doInit(){
 	//getCurrLunarDate();
 	//在线人数
 	//queryOnlineUserCount();
+	$("#menu-lv1-999").children('a').bind("click",function(){
+		if($("#menu-lv2-ul-999 ").is(":hidden")){
+			$("#menu-lv2-ul-999 ").show();
+		} else{
+			$("#menu-lv2-ul-999 ").hide();
+		}
+					});
+	$("#menu-lv2-999380").children('a').bind("click",function(){
+		addNewTabs("我的桌面","/system/core/docType/index.jsp");
+					});
+	$("#menu-lv2-999381").children('a').bind("click",function(){
+						addNewTabs("文件","/system/core/receiveFile/index.jsp");
+			});
 	//创建拖动事件
 	$("#queryFrame").draggable();
 	remindCheck();
@@ -430,6 +443,15 @@ function closeAll(){
                         <div class="sxcd_c" id="Demo">
                         	<div class="menu_list content" >
                             <ul id="menu_list_obj">
+                             <li id='menu-lv1-999' class=''><a href='javascript:void(0);' style='margin-top:0;' class='yjcd' title=系统管理><span></span>系统管理 <span class="caret-down"></span><span class="caret-right"></span></a>
+                             <ul class='child'  id='menu-lv2-ul-999'>
+                             <li   id='menu-lv2-999380'><a href='javascript:void(0);' class='ejcd' title=系统日志管理><span class="caret-right"></span><span class="caret-down"></span>系统日志管理 </a></li>
+                             <li   id='menu-lv2-999381'><a href='javascript:void(0);' class='ejcd' title=系统日志管理><span class="caret-right"></span><span class="caret-down"></span>系统日志管理 </a></li>
+                             
+                             </ul>
+                             
+                             </li>
+                            
                             </ul>
                             </div>
                         </div>
