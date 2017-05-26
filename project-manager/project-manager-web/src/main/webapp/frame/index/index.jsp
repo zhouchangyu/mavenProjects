@@ -147,9 +147,9 @@ var _Menu = "null";
 var autoHide = null;
 function  doInit(){
 	//菜单
-	getMenuListNew();
+	//getMenuListNew();
 	//获取当前时间
-	getCurrLunarDate();
+	//getCurrLunarDate();
 	//在线人数
 	//queryOnlineUserCount();
 	//创建拖动事件
