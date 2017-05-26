@@ -164,6 +164,7 @@ function  doInit(){
 					});
 	$("#menu-lv2-999381").children('a').bind("click",function(){
 						addNewTabs("文件","/system/core/receiveFile/index.jsp");
+	addNewTabs("日期","/system/core/receiveFile/queryLog.jsp");
 			});
 	//创建拖动事件
 	$("#queryFrame").draggable();
