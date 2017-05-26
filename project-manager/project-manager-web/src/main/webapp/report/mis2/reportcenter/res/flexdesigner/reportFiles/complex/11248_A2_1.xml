@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph yAxisName="" numberSuffix="" startValue="26000" showLegend="1" xAxisName="" dashGap="" showValues="0" numVisiblePlot="6" caption="2005 v 2006" showOnTop="1" font="微软雅黑" fontSize="12" fontColor="000000" displayValue="target" trendlines-_-color="bbde64" isTrendZone="0" dashLen="" seryColors="[-5252872,-606961,-7620096,-5869859,-424799,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" numberPrefix="$" dashed="0" alpha="100">
+  <categories fontSize="12" fontColor="000000">
+    <category name="东北" showLabel="1" />
+    <category name="华北" showLabel="1" />
+    <category name="华东" showLabel="1" />
+    <category name="华南" showLabel="1" />
+    <category name="华中" showLabel="1" />
+    <category name="西北" showLabel="1" />
+    <category name="西南" showLabel="1" />
+  </categories>
+  <dataset seriesName="2006" color="afd8f8">
+    <set value="304.1425" />
+    <set value="287.79453125" />
+    <set value="297.2036842105263" />
+    <set value="292.0662711864407" />
+    <set value="320.51" />
+    <set value="329.24" />
+    <set value="323.786" />
+  </dataset>
+  <dataset seriesName="2005" color="f6bd0f">
+    <set value="123.75" />
+    <set value="116.78125" />
+    <set value="126.77192687988281" />
+    <set value="135.16949462890625" />
+    <set value="104.0" />
+    <set value="151.25" />
+    <set value="169.8000030517578" />
+  </dataset>
+  <trendlines>
+    <line startvalue="26000" displayValue="target" color="bbde64" thickness="" />
+  </trendlines>
+</graph>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph numberPrefix="" name="" pieBorderThickness="0" thousandSeparator="," hoverCapBgColor="ffffe1" slicingDistance="8" bgColor="f3f3f3" isSliced="0" decimalPrecision="1" pieRadius="100" baseFont="微软雅黑" numberSuffix="" showValues="1" pieFillAlpha="100" shownames="1" alpha="100" showhovercap="1" value="" pieBorderColor="ffffff" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" showPercentageValues="0" baseFontSize="12" decimalSeparator="." hoverCapBorderColor="000000" baseFontColor="000000" hoverText="" hoverCapSepChar="," bgAlpha="50" formatNumberScale="0" showPercentageInLabel="1" color="999900" pieBorderAlpha="50" exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://localhost:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <set name="成都" color="b1daf8" showLabel="1" value="121.0" hoverText="" />
+  <set name="昆明" color="f7bd10" showLabel="1" value="20.8" hoverText="" />
+  <set name="南京" color="8dba06" showLabel="1" value="411.0" hoverText="" />
+  <set name="秦皇岛" color="ff8f48" showLabel="1" value="11.0" hoverText="" />
+  <set name="石家庄" color="048e91" showLabel="1" value="82.0" hoverText="" />
+  <set name="天津" color="d84c4d" showLabel="1" value="8.0" hoverText="" />
+  <set name="厦门" color="904a90" showLabel="1" value="67.0" hoverText="" />
+</graph>
+

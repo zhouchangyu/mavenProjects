@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph color="999900" hoverCapBorderColor="000000" showValues="0" numberPrefix="" name="" pieRadius="65" pieFillAlpha="100" showBorder="0" showPercentageValues="0" hoverCapSepChar="," slicingDistance="2" pieBorderThickness="0" pieBorderColor="ffffff" showhovercap="1" shownames="1" bgColor="ffffff" hoverText="" decimalPrecision="1" hoverCapBgColor="ffffe1" value="" alpha="100" decimalSeparator="." bgAlpha="50" baseFontSize="12" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" showPercentageInLabel="1" baseFontColor="000000" baseFont="微软雅黑" formatNumberScale="0" numberSuffix="" pieBorderAlpha="50" isSliced="0" thousandSeparator="," exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <set name="常州公司" color="b1daf8" showLabel="1" value="234.0" hoverText="" />
+  <set name="湖州公司" color="f7bd10" showLabel="1" value="98.0" hoverText="" />
+  <set name="南通公司" color="8dba06" showLabel="1" value="300.0" hoverText="" />
+  <set name="其他" color="ff8f48" showLabel="1" value="587.0" hoverText="" />
+  <set name="上海罗店" color="048e91" showLabel="1" value="129.0" hoverText="" />
+  <set name="舟山公司" color="d84c4d" showLabel="1" value="100.0" hoverText="" />
+</graph>
+

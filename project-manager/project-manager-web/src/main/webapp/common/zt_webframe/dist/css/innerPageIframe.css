@@ -1,0 +1,343 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	color: #333;
+	font-family: "微软雅黑", "黑体";
+}
+
+body {
+	padding: 0;
+}
+
+.btn-default {
+	font-size: 16px;
+	color: #5e8bbb;
+	color: #fff;
+	line-height: 28px;
+	padding: 0 10px;
+	display: block;
+	border: none;
+	/* float: left; */
+	display: inline-block;
+	margin: 5px;
+	outline: none;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	/* Firefox */
+	-webkit-border-radius: 5px;
+	/* Safari 和 Chrome */
+	border-radius: 5px;
+	/* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+	background: #d5e4f4;
+	background: #54a8fd;
+	/*z-index: 1;*/
+	/*   border: 1px solid #99c0e8; */
+	behavior: url(dist/css/pie.htc);
+	/*兼容IE的css3的border-radius*/
+}
+
+.btn_default {
+	font-size: 16px;
+	color: #5e8bbb;
+	color: #fff;
+	line-height: 28px;
+	padding: 0 10px;
+	display: block;
+	border: none;
+	/* float: left; */
+	display: inline-block;
+	margin: 5px;
+	outline: none;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	/* Firefox */
+	-webkit-border-radius: 5px;
+	/* Safari 和 Chrome */
+	border-radius: 5px;
+	/* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+	background: #d5e4f4;
+	background: #54a8fd;
+	/*z-index: 1;*/
+	/*border: 1px solid #99c0e8;*/
+	behavior: url(dist/css/pie.htc);
+	/*兼容IE的css3的border-radius*/
+}
+
+.btn_logo {
+	padding-left: 32px;
+	background-position: 5px center;
+	background-repeat: no-repeat;
+}
+
+.title {
+	overflow: hidden;
+/* 	padding: 5px 0; */
+	border-bottom: 1px solid #0093cf;
+	margin-bottom: 5px;
+}
+
+.title .titleName {
+	float: left;
+	color: #0f4e85;
+	padding-left: 30px;
+	line-height: 40px;
+	background-image: url(../img/innerPageIframe/contenLogo.png);
+	background-position: 2px center;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	margin-left: 5px;
+}
+
+.btns {
+	float: right;
+}
+
+.title .btns .btn_logo {
+	padding-left: 32px;
+	background-position: 5px center;
+	background-repeat: no-repeat;
+}
+
+.content {
+	background-color: #f0f5fc;
+	position: absolute;
+	top: 49px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.container .content {
+	background-color: #f0f5fc;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+table.tableBlock {
+	width: 100%;
+	background-color: #c8ddff;
+	border-collapse: collapse;
+	/*border: 1px solid #eeeeee;*/
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+table.whiteTable{
+	background-color: #fff;
+}
+
+.tableTitle{
+	background-color: #c8ddff;
+}
+
+
+.tableInput {
+	line-height: 25px;
+	height: 25px;
+	width: 70%;
+	font-size: 18px;
+	padding: 2px;
+	text-indent: 5px;
+	color:#555;
+	border: 1px solid #cdcdcd;
+	font-family: "微软雅黑", "黑体";
+	color: #505050;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+input.smallInput{
+	width:16.5%;
+}
+
+.tableTextarea {
+	min-width: 70%;
+	min-height: 50px;
+	line-height: 20px;
+	padding: 5px 5px;
+	font-size: 16px;
+	font-family: "微软雅黑", "黑体";
+	border: 1px solid #e6e6e6;
+	border: 1px solid #a59d9d;
+	color: #505050;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.tableCheckbox{
+	width:18px;
+	height:18px;
+	display:inline-block;
+	vertical-align:middle;
+	margin:0 5px;
+}
+
+input[type="checkbox"]{
+	width:18px;
+	height:18px;
+	display:inline-block;
+}
+
+.tableSelect {
+	line-height: 30px;
+	height: 31px;
+	width:70%;
+	font-size: 16px;
+	border: 1px solid #e6e6e6;
+	border: 1px solid #a59d9d;
+	color: #505050;
+	border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.unNull {
+	font-size: 20px;
+	color: red;
+}
+
+table.tableBlock tr {
+	height: 35px;
+	/*border: 1px solid #eee;*/
+}
+
+table.tableBlock tr td {
+	min-height: 35px;
+	border: 1px solid #82a4d2;
+	padding: 5px 10px;
+	font-size: 16px;
+	white-space: no-wrap;
+	/*加上影响  IE/ff 下table中的边框    一开始为什么加上已经忘了*/
+	/* position: relative; */
+}
+
+/*表头去除border*/
+table.tableBlock tr td.no-border{
+	border:none;
+}
+
+/*三级联动(表格内下拉菜单)样式*/
+td .pageBox {
+	display: none;
+	min-width: 170px;
+	background-color: #fff;
+	border: 1px solid #e6e6e6;
+	border-top: none;
+	text-align: center;
+	z-index: 3;
+}
+
+td .pageBox .pageBoxList {
+	width: 100%;
+}
+
+td .pageBox .pageBoxList li {
+	line-height: 22px;
+	font-size: 13px;
+	color: #333;
+	cursor: pointer;
+	text-align: left;
+	padding: 0 15px;
+}
+
+td .pageBox .pageBoxList li:hover {
+	background-color: #5e8bbb;
+	color: #fff;
+}
+
+td .pageBox .pageBoxList li.active {
+	background-color: #5e8bbb;
+	color: #fff;
+}
+
+td .pageBox .pageIndexBox {
+	width: 100%;
+	height: 24px;
+	background-color: #d6eeff;
+}
+
+td .pageBox .pageIndexBox span.first {
+	float: left;
+	padding: 0 2px;
+	line-height: 24px;
+	vertical-align: middle;
+	cursor: pointer;
+	letter-spacing: -5px;
+}
+
+td .pageBox .pageIndexBox span.last {
+	float: right;
+	line-height: 24px;
+	padding: 0 6px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
+	letter-spacing: -5px;
+}
+
+td .pageBox .pageIndexBox ul.pageIndexList {
+	overflow: hidden;
+	margin: 0 auto;
+	display: inline-block;
+	height: 24px;
+}
+
+td .pageBox .pageIndexBox ul.pageIndexList li {
+	line-height: 24px;
+	float: left;
+	padding: 0 5px;
+	cursor: pointer;
+}
+
+td .pageBox .pageIndexBox ul.pageIndexList li:hover
+	{
+	background-color: #5e8bbb;
+	color: #fff;
+}
+
+td .pageBox .pageIndexBox ul.pageIndexList li.active
+	{
+	background-color: #5e8bbb;
+	color: #fff;
+}
+
+.dotLeft {
+	float: left;
+}
+
+.dotRight {
+	float: right;
+}
+
+#modal-box {
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	position: fixed;
+	filter: Alpha(opacity = 60);
+	background-color: #000;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+}

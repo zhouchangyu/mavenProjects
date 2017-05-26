@@ -1,0 +1,234 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "微软雅黑";
+  overflow: auto;
+  /*为了去除子元素margin-top的影响*/
+  float: left;
+  /*为了去除子元素margin-top的影响*/
+  padding: 10px 0 0 40px;
+  box-sizing: border-box;
+  background-image: url(../img/page1/bg_right.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.welcome {
+  font-family: "宋体";
+  font-weight: bold;
+}
+
+.titleBlock {
+  clear: both;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.titleBlock .itemBlock {
+  font-size: 16px;
+}
+
+.titleBlock .itemBlock p {
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.titleBlock .itemBlock .blockNum {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: #c52a14;
+}
+
+.titleBlock .itemBlock1 {
+  width: 150px;
+  height: 90px;
+  float: left;
+  background-image: url(../img/page1/block1.png);
+  position: relative;
+}
+
+.titleBlock .itemBlock2 {
+  width: 150px;
+  height: 90px;
+  float: left;
+  margin-left: 20px;
+  background-image: url(../img/page1/block2.png);
+  position: relative;
+}
+
+.buttons {
+  float: left;
+  margin-left: 10px;
+}
+
+.buttons .btn {
+  padding: 0 12px 0 12px;
+  height: 30px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.buttons .btn_type1 {
+  background-image: url(../img/page1/btn_type1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.buttons .btn_type2 {
+  display: inline-block;
+  background-image: url(../img/page1/btn_type1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.buttons .btn_type2 .search {
+  padding-left: 22px;
+  padding-right: 0;
+  background-image: url(../img/page1/search.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.buttons .btn_del {
+  background-image: url(../img/page1/btn_del.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.main .mainBlock {
+  width: 529px;
+  height: 320px;
+}
+
+.main .mainBlock1 {
+  float: left;
+  margin-top: 25px;
+  background-image: url(../img/page1/red_frame.png);
+  background-repeat: no-repeat;
+}
+
+.main .mainBlock1 .mainBlock1Title {
+  overflow: hidden;
+}
+
+.main .mainBlock1 .mainBlock1Title .title {
+  float: left;
+  line-height: 35px;
+  background-image: url(../img/page1/todo.png);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  background-position: center left;
+}
+
+.main .mainBlock1 .mainBlock1Title .more {
+  float: right;
+  margin-right: 20px;
+  line-height: 35px;
+}
+
+.main .mainBlock1 .mainBlock1Title .more a {
+  color: #121111;
+  text-decoration: none;
+}
+
+.main .mainBlock1 table {
+  width: 99%;
+  margin: 0 auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.main .mainBlock1 table tr {
+  height: 47px;
+  font-size: 16px;
+  line-height: 47px;
+}
+
+.main .mainBlock1 table tr:nth-child(even) {
+  background-color: #fff9ed;
+}
+
+.main .mainBlock2 {
+  float: left;
+  width: 450px;
+  height: 327px;
+  margin-top: 25px;
+  margin-left: 22px;
+  background-image: url(../img/page1/blue_frame.png);
+}
+
+.main .mainBlock2 .mainBlock2Title {
+  overflow: hidden;
+}
+
+.main .mainBlock2 .mainBlock2Title .title {
+  float: left;
+  line-height: 35px;
+  background-image: url(../img/page1/show.png);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  background-position: center left;
+}
+
+.main .mainBlock2 .mainBlock2Title .more {
+  float: right;
+  margin-right: 20px;
+  line-height: 35px;
+}
+
+.main .mainBlock2 .mainBlock2Title .more a {
+  color: #121111;
+  text-decoration: none;
+}
+
+.main .mainBlock2 ul {
+  width: 415px;
+  margin: 0 auto;
+}
+
+.main .mainBlock2 ul li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 35px;
+  color: #a1a1a1;
+  overflow: hidden;
+  padding-left: 20px;
+  list-style-type: none;
+  border-bottom: 1px dashed #aaa;
+  background-image: url(../img/page1/dot.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.main .mainBlock2 ul li a {
+  text-decoration: none;
+  color: #043471;
+}
+
+.main .mainBlock2 ul li span {
+  float: right;
+  color: #808080;
+}

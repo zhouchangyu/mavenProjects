@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="GBK"?>
+<graph canvasBorderColor="4a4a4a" divlinecolor="c2c8b9" alternateHGridAlpha="50" numberSuffix="" canvasBgColor="e5e8e1" alternateVGridAlpha="50" shownames="1" hDivlinecolor="4a4a4a" seriesName="" decimalSeparator="." showValues="0" canvasBgAlpha="20" numHDivlines="0" hoverText="" numdivlines="4" isTrendZone="0" trendlines-_-color="bbde64" dashGap="" showDivLineValue="1" alpha="50" hoverCapBgColor="ffffe1" canvasBorderThickness="2" dashLen="" showOnTop="0" baseFontColor="000000" value="" displayValue="target" formatNumberScale="0" name="" xAxisName="货主地区" numberPrefix="" thickness="2" caption="叠加条形图(3D)" hoverCapSepChar="," subcaption="" bgColor="ffffff" baseFontSize="12" fontColor="000000" divLineThickness="1" thousandSeparator="," startValue="1300" hDivLineAlpha="60" divLineDecimalPrecision="1" bgAlpha="50" showhovercap="1" hDivLineThickness="1" dashed="0" alternateVGridColor="ebebeb" endValue="0" showAlternateVGridColor="0" decimalPrecision="1" rotateNames="0" fontSize="12" divLineAlpha="60" showLegend="1" yAxisName="" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" font="微软雅黑" alternateHGridColor="ebebeb" showAlternateHGridColor="0" color="000000" toolText="" hoverCapBorderColor="000000" showBarShadow="0" parentYAxis="S" baseFont="微软雅黑" showName="1">
+  <categories fontSize="12" fontColor="000000">
+    <category name="成都" showLabel="1" />
+    <category name="昆明" showLabel="1" />
+    <category name="南京" showLabel="1" />
+    <category name="秦皇岛" showLabel="1" />
+    <category name="石家庄" showLabel="1" />
+    <category name="天津" showLabel="1" />
+    <category name="厦门" showLabel="1" />
+  </categories>
+  <dataset seriesName="1" color="b1daf8">
+    <set value="1.0" />
+    <set value="1.0" />
+    <set value="5.0" />
+    <set value="1.0" />
+    <set value="1.0" />
+    <set value="1.0" />
+    <set value="1.0" />
+  </dataset>
+  <dataset seriesName="2" color="f7bd10">
+    <set value="1.0" />
+    <set value="1.0" />
+    <set value="5.0" />
+    <set value="1.0" />
+    <set value="1.0" />
+    <set value="1.0" />
+    <set value="1.0" />
+  </dataset>
+  <trendlines>
+    <line startvalue="1300" displayValue="target" color="bbde64" thickness="2" />
+  </trendlines>
+</graph>
+

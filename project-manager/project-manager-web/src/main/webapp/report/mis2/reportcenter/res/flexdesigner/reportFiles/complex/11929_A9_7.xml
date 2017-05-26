@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph subcaption="" color="999900" pieRadius="70" numberPrefix="" name="" showPercentageInLabel="1" showPercentageValues="1" exportCallback="fcExportCallback" showhovercap="0" thousandSeparator="," exportShowMenuItem="0" bgAlpha="100" hoverCapBorderColor="000000" exportAction="save" baseFontColor="ffffff" showShadow="100" showValues="1" hoverCapBgColor="ffffe1" value="" shownames="1" bgColor="1c2d3d" decimalSeparator="." decimalPrecision="2" shadowColor="f3f3f3" baseFontSize="9" exportAtClient="0" baseFont="微软雅黑" formatNumberScale="0" exportHandler="http://localhost:8078/reportmis/DirectPrintServlet" exportEnabled="1" numberSuffix="" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" hoverText="" caption="装机容量—发电类型分布" hoverCapSepChar=",">
+  <set name="水电" color="b1daf8" showLabel="1" value="7.33" hoverText="7.33" />
+  <set name="风电" color="f7bd10" showLabel="1" value="1.64" hoverText="1.64" />
+  <set name="火电" color="8dba06" showLabel="1" value="91.03" hoverText="91.03" />
+</graph>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<graph seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" chartTopMargin="" lineDashLen="" numberSuffix="" animation="1" numberScaleValue="" anchorAlpha="100" canvasLeftMargin="" xAxisNamePadding="1" showYAxisValues="0" legendBgColor="ffffff" dashed="1" rotateLabels="0" alternateVGridAlpha="100" numDivLines="4" labelDisplay="" anchorSides="8" decimals="0" anchorBgColor="0099ff" divLineDashGap="0" aboutMenuItemLink="" canvasBorderAlpha="70" showDivLineValues="1" legendScrollBgColor="ffcccc" alpha="100" divLineAlpha="70" xAxisName="货主地区" showLabels="1" seriesNameInToolTip="1" yAxisName="销售数量" legendScrollBtnColor="ccffcc" aboutMenuItemLabel="" lineThickness="2" legendScrollBarColor="ccccff" alternateVGridColor="9999ff" bgAngle="90" numberScaleUnit="" divLineDashLen="1px" legendPosition="BOTTOM" slantLabels="0" captionPadding="" thousandSeparator="" bgAlpha="100" showValue="0" toolTipSepChar="," showAboutMenuItem="1" showZeroPlane="1" bgSWFAlpha="0" labelVAlign="top" thickness="2" staggerLines="" chartRightMargin="" outCnvBaseFontSize="12" yAxisValuesPadding="0" vDivLineThickness="1" logoScale="0" canvasRightMargin="" bgColor="ffffff" yAxisMinValue="0" showAlternateHGridColor="1" yAxisValuesStep="" showLabel="1" showBorder="1" label="" legendAllowDrag="1" showAlternateVGridColor="1" canvasBorderColor="cc99ff" numberPrefix="" legendIconScale="2" formatNumberScale="1" canvasTopMargin="" paletteColors="" showValues="0" vDivLineDashGap="0" lineColor="6600ff" rotateValues="1" divLineColor="d5d5d5" logoLink="" outCnvBaseFont="宋体" showShadow="1" anchorRadius="4" canvasBgAlpha="100" labelStep="" baseFontSize="12" vDivLineAlpha="100" vDivLineDashLen="1px" yAxisValueDecimals="0" adjustDiv="1" dashLen="" labelHAlign="left" toolTipBgColor="ffffff" logoAlpha="0" legendCaption="" outCnvBaseFontColor="660033" subCaption="" sNumberSuffix="" borderThickness="1" alternateHGridColor="f8f8f8" color="000000" borderColor="cc99ff" canvasBgAngle="90" numVDivLines="0" sNumberPrefix="" formatNumber="0" borderAlpha="100" yAxisNamePadding="1" reverseLegend="1" valueOnRight="1" baseFont="Arial" startValue="1000" divLineThickness="1" legendShadow="1" endValue="109" palette="" value="2" decimalSeparator="" includeInLegend="1" clickURL="" logoPosition="" setAdaptiveYMin="0" yAxisNameWidth="" vDivLineIsDashed="1" showToolTipShadow="0" dashGap="" showLimits="1" canvasBorderThickness="1" legendBorderAlpha="100" zeroPlaneThickness="1" anchorBorderThickness="1" valuePosition="auto" legendBgAlpha="100" canvasBottomMargin="" zeroPlaneAlpha="100" minimiseWrappingInLegend="1" isTrendZone="1" canvasPadding="" caption="销售情况走势" interactiveLegend="1" forceDecimals="1" chartLeftMargin="" bgSWF="0" drawAnchors="1" showOnTop="1" yAxisMaxValue="200" rotateYAxisName="1" valuePadding="" showToolTip="1" vDivLineColor="cccccc" trendlines-_-color="ffffff" chartBottomMargin="" alternateHGridAlpha="60" zeroPlaneColor="9999ff" showVLineLabelBorder="1" toolTipBorderColor="000000" seriesName="" inThousandSeparator="" linePosition="" legendBorderThickness="0" labelPadding="" anchorBorderColor="" displayValue="target" canvasBgRatio="0" inDecimalSeparator="" fontSize="12" labelPosition="" lineDashGap="" lineAlpha="100" showLegend="1" legendPadding="" legendNumColumns="0" showLabelBorder="1" canvasBgColor="ffffff" defaultNumberScale="" fontColor="660033" baseFontColor="990000" font="宋体" bgRatio="2" anchorBgAlpha="100" lineDashed="0" forceYAxisValueDecimals="1" divLineIsDashed="0" legendBorderColor="ffffff" useEllipsesWhenOverflow="1" toolText="" defaultAnimation="1" logoURL="" link="">
+  <categories fontSize="12" fontColor="660033">
+    <category name="东北" showLabel="1" />
+    <category name="华北" showLabel="1" />
+    <category name="华东" showLabel="1" />
+    <category name="华南" showLabel="1" />
+    <category name="华中" showLabel="1" />
+    <category name="西北" showLabel="1" />
+    <category name="西南" showLabel="1" />
+  </categories>
+  <dataset seriesName="销售数量" color="b1daf8">
+    <set value="158.0" />
+    <set value="2205.0" />
+    <set value="3295.0" />
+    <set value="2255.0" />
+    <set value="208.0" />
+    <set value="605.0" />
+    <set value="849.0" />
+  </dataset>
+  <trendlines>
+    <line startvalue="1000" displayValue="target" color="ffffff" thickness="2" />
+  </trendlines>
+</graph>
+

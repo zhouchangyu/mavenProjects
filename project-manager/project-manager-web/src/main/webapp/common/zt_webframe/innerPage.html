@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内容页</title>
+	<link rel="stylesheet" href="dist/css/innerPage.css">
+	<link rel="stylesheet" href="dist/css/init.css">
+</head>
+<body>
+	<div id="tab">
+		<ul class="tabList">
+			<li class="tabItem active"><span class="tabtext">机要文件登记</span></li>
+			<li class="tabItem"><span class="tabtext">国【2017】27号</span></li>
+		</ul>
+	</div>
+	<div id="tabContent">
+		<iframe src="innerPageIframe.html" frameborder="0"></iframe>
+	</div>
+	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("body").on("click",".tabItem",function(){
+			$('.tabItem').removeClass("active");
+			$(this).addClass("active");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph color="999900" showPercentageValues="0" numberPrefix="" shownames="1" pieRadius="100" hoverText="" pieBorderColor="ffffff" baseFontSize="12" numberSuffix="" name="" pieBorderThickness="0" slicingDistance="8" isSliced="0" baseFontColor="000000" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" showhovercap="1" formatNumberScale="0" baseFont="微软雅黑" pieFillAlpha="100" showValues="1" hoverCapBgColor="ffffe1" pieBorderAlpha="50" decimalPrecision="1" decimalSeparator="." bgColor="f3f3f3" thousandSeparator="," showPercentageInLabel="1" hoverCapSepChar="," hoverCapBorderColor="000000" value="" bgAlpha="50" alpha="100" exportEnabled="1" exportAtClient="0" exportShowMenuItem="1" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <set name="东北" color="b1daf8" showLabel="1" value="168.0" hoverText="" />
+  <set name="华北" color="f7bd10" showLabel="1" value="199.0" hoverText="" />
+  <set name="华东" color="8dba06" showLabel="1" value="196.0" hoverText="" />
+  <set name="华南" color="ff8f48" showLabel="1" value="199.0" hoverText="" />
+  <set name="华中" color="048e91" showLabel="1" value="156.0" hoverText="" />
+  <set name="西北" color="d84c4d" showLabel="1" value="182.0" hoverText="" />
+  <set name="西南" color="904a90" showLabel="1" value="198.0" hoverText="" />
+</graph>
+

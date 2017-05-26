@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph canvasBorderThickness="2" formatNumber="1" bgAlpha="100" baseFontSize="12" logoAlpha="0" thickness="1" baseFont="Arial" showAboutMenuItem="1" fontSize="12" label="" divLineAlpha="50" dashGap="" showYAxisValues="0" formatNumberScale="0" plotFillRatio="5" bgRatio="5" toolText="" plotBorderThickness="1" clickURL="" outCnvBaseFontColor="000000" staggerLines="" legendScrollBgColor="ffcccc" valuePadding="" zeroPlaneThickness="1" aboutMenuItemLabel="" inThousandSeparator="" showDivLineValues="1" canvasBorderColor="ffffff" aboutMenuItemLink="" chartTopMargin="" showValue="0" legendScrollBtnColor="ccffcc" legendBorderColor="ffffff" defaultNumberScale="" showLimits="1" legendBgColor="ffffff" interactiveLegend="1" canvasBottomMargin="" slantLabels="0" displayValue="" divLineThickness="1" showOnTop="0" value="2" canvasBgRatio="5" numberPrefix="" xAxisNamePadding="5" plotFillAlpha="100" animation="1" alternateHGridColor="f3f3f3" logoScale="0" forceDecimals="1" logoPosition="" legendNumColumns="4" canvasRightMargin="" alternateHGridAlpha="50" dashLen="" useEllipsesWhenOverflow="1" showLegend="1" zeroPlaneColor="9999ff" bgColor="ffffff" link="" canvasBgColor="ffffff" plotSpacePercent="10%" canvasLeftMargin="" adjustDiv="1" labelPosition="" legendAllowDrag="1" subCaption="" decimalSeparator="" numberSuffix="" yAxisMinValue="" plotBorderDashed="0" showAlternateHGridColor="1" legendBorderThickness="1" yAxisName="" palette="" canvasBgAlpha="100" toolTipSepChar="," showToolTip="1" toolTipBgColor="ffffff" minimiseWrappingInLegend="1" legendScrollBarColor="ccccff" logoLink="" legendIconScale="0" isTrendZone="0" canvasBgAngle="90" yAxisNamePadding="" yAxisMaxValue="" outCnvBaseFont="宋体" endValue="0" labelDisplay="" alpha="100" divLineColor="cccccc" valueOnRight="0" bgSWFAlpha="100" font="宋体" seryColors="[-5121288,-10704,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" inDecimalSeparator="" labelStep="" divLineDashLen="1px" baseFontColor="000000" startValue="0" ratio="" bgSWF="0" yAxisNameWidth="" showPercentValues="1" canvasTopMargin="" linePosition="0.5" forceYAxisValueDecimals="1" showLabels="0" yAxisValuesStep="" canvasBorderAlpha="100" reverseLegend="1" labelVAlign="top" xAxisName="" outCnvBaseFontSize="12" rotateYAxisName="1" labelHAlign="left" yAxisValuesPadding="" bgAngle="90" showLabel="0" decimals="0" logoURL="" plotBorderDashGap="0" numberScaleUnit="" zeroPlaneAlpha="50" legendPadding="5" labelPadding="" showBorder="1" showLabelBorder="1" plotBorderColor="4a4a4a" fontColor="000000" showPlotBorder="1" plotBorderAlpha="100" legendBgAlpha="100" legendPosition="RIGHT" yAxisValueDecimals="0" toolTipBorderColor="000000" legendBorderAlpha="100" trendlines-_-color="ffffff" numDivLines="4" rotateLabels="0" defaultAnimation="1" legendShadow="1" divLineDashGap="0" stack100Percent="0" chartLeftMargin="" seriesName="" caption="" seriesNameInToolTip="1" showShadow="1" showVLineLabelBorder="1" showSum="0" chartBottomMargin="" divLineIsDashed="1" plotGradientColor="ffffff" color="000000" numberScaleValue="" borderThickness="1" dashed="0" showValues="0" showPercentInToolTip="1" showToolTipShadow="1" thousandSeparator="" includeInLegend="1" chartRightMargin="" rotateValues="1" legendCaption="" useRoundEdges="0" borderAlpha="100" plotFillAngle="270" plotBorderDashLen="1px" borderColor="ffffff" paletteColors="" captionPadding="5" exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <categories fontSize="12" fontColor="000000">
+    <category name="本月目标" showLabel="1" />
+    <category name="本月完成情况" showLabel="1" />
+    <category name="上月目标" showLabel="1" />
+    <category name="上月完成情况" showLabel="1" />
+  </categories>
+  <dataset seriesName="舟山公司" color="b1daf8">
+    <set value="2344.0" />
+    <set value="1233.0" />
+    <set value="3214.0" />
+    <set value="2111.0" />
+  </dataset>
+  <dataset seriesName="湖州公司" color="ffd630">
+    <set value="1876.0" />
+    <set value="876.0" />
+    <set value="3444.0" />
+    <set value="2333.0" />
+  </dataset>
+  <dataset seriesName="常州公司" color="8dba06">
+    <set value="3444.0" />
+    <set value="2111.0" />
+    <set value="2222.0" />
+    <set value="1111.0" />
+  </dataset>
+  <dataset seriesName="南通公司" color="ff8f48">
+    <set value="3455.0" />
+    <set value="2222.0" />
+    <set value="4322.0" />
+    <set value="1212.0" />
+  </dataset>
+  <dataset seriesName="上海罗店" color="048e91">
+    <set value="2332.0" />
+    <set value="1232.0" />
+    <set value="4332.0" />
+    <set value="2313.0" />
+  </dataset>
+  <dataset seriesName="其它" color="d84c4d">
+    <set value="9088.0" />
+    <set value="6777.0" />
+    <set value="10222.0" />
+    <set value="8765.0" />
+  </dataset>
+</graph>
+

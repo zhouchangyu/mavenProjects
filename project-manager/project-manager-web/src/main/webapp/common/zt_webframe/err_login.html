@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>404</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			font-family: "微软雅黑";
+		}
+		.center{
+			width: 400px;
+			margin:0 auto;
+			margin-top: 80px;
+		}
+		.center img{
+			display:block;
+		}
+		.center img.err{
+
+		}
+		p{
+			text-align:center;
+			font-size: 14px;
+			margin-top: 25px;
+		}
+		#backToIndex{
+			width: 101px;
+			height: 40px;
+			background-image: url(dist/img/404_505/errBtn.png);
+			display: block;
+			margin:0 auto;
+			margin-top: 25px;
+			color: #fff;
+			border:none;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<img class="err" src="dist/img/404_505/err.png" alt="">
+		<img class="err404" src="dist/img/404_505/err_no_access.png" alt="">
+		<p>您未登录或登录已过期,请重新登录!</p>
+		<input type="button" id="backToIndex" value="返回首页">
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录界面</title>
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=IE8,chrome=1"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<link rel="stylesheet" href="dist/css/login.css">
+	<script type="text/javascript" src="dist/js/respond.min.js"></script>
+</head>
+<body>
+	<!-- <img id="mainBg" src="dist/img/login/bg.png" alt=""> -->
+	<div class="title1">
+		<div class="name">
+			<div class="big">国家信访局</div>
+			<div class="small">State Bureau for Letters and Calls</div>
+		</div>
+	</div>
+	<div class="title2">
+		<img src="dist/img/login/title2.png" alt="">
+	</div>
+	<div class="form">
+		<div class="content">
+			<!-- <input type="password" id="password" placeholder="请输入密码"> -->
+			<input type="text" name="fake_pass" id="fake_pass" value="请输入密码" style="display:none"/>
+			<input type="password" name="password" id="password"/>​
+			<div class="btns">
+				<input type="button" class="login" value="登录">
+				<input type="button" class="cancel" value="取消">
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="top">
+			<span class="block qq">信访QQ</span>
+			<span class="block download">控件下载</span>
+			<span class="block book">用户手册</span>
+		</div>
+		<hr>
+		<div class="bottom">技术支持：北京北大软件工程股份有限公司</div>
+	</div>
+</body>
+<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+<script type="text/javascript">
+/*IE里的password类型的placeholder兼容处理*/
+	// On DOM ready, hide the real password
+$('#password').hide();
+
+// Show the fake pass (because JS is enabled)
+$('#fake_pass').show().css("color","#c1c1c1");
+
+// On focus of the fake password field
+$('#fake_pass').focus(function(){
+    $(this).hide(); //  hide the fake password input text
+    $('#password').show().focus(); // and show the real password input password
+});
+
+// On blur of the real pass
+$('#password').blur(function(){
+    if($(this).val() == ""){ // if the value is empty,
+        $(this).hide(); // hide the real password field
+        $('#fake_pass').show(); // show the fake password
+    }
+    // otherwise, a password has been entered,
+    // so do nothing (leave the real password showing)
+});
+</script>
+</html>

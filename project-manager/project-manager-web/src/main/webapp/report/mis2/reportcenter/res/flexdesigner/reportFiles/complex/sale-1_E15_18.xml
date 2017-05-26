@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph canvasBgColor="ffffff" fontSize="12" canvasBorderThickness="2" hoverText="" formatNumberScale="0" showAlternateVGridColor="0" VDivLineAlpha="60" font="微软雅黑" showDivLineValue="1" baseFont="微软雅黑" hoverCapBorderColor="000000" showAlternateHGridColor="1" VDivLineThickness="1" toolText="" divLineDecimalPrecision="1" showOnTop="0" shownames="1" divLineThickness="1" name="" fontColor="000000" numdivlines="4" numberPrefix="" decimalPrecision="1" subcaption="润乾" bgAlpha="50" value="" dashLen="" rotateNames="0" dashed="0" legendPosition="BOTTOM" startValue="200" alternateHGridColor="f7f7f7" VDivlinecolor="4a4a4a" endValue="0" showLegend="1" seriesName="" trendlines-_-color="bbde64" divLineAlpha="60" baseFontSize="12" numVDivlines="0" alternateVGridColor="ffffff" parentYAxis="S" bgColor="f3f3f3" decimalSeparator="." xAxisName="货主地区" divlinecolor="dfdfdf" thousandSeparator="," numberSuffix="" caption="多柱图(2D)" color="000000" showhovercap="1" baseFontColor="000000" dashGap="" showColumnShadow="0" canvasBorderColor="4a4a4a" showNames="1" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" showValues="0" displayValue="target" hoverCapSepChar="," canvasBgAlpha="100" thickness="2" isTrendZone="0" showName="1" alternateHGridAlpha="50" alpha="50" hoverCapBgColor="ffffe1" yAxisName="" exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <categories fontSize="12" fontColor="000000">
+    <category name="全年" showLabel="1" />
+    <category name="YTM" showLabel="1" />
+  </categories>
+  <dataset seriesName="目标" color="b1daf8">
+    <set value="43464.0317" />
+    <set value="33717.9517" />
+  </dataset>
+  <dataset seriesName="完成情况" color="f7bd10">
+    <set value="39389.3216" />
+    <set value="39389.3216" />
+  </dataset>
+  <trendlines>
+    <line startvalue="200" displayValue="target" color="bbde64" thickness="2" />
+  </trendlines>
+</graph>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="GBK"?>
+<graph canvasTopMargin="" numVDivLines="0" lineDashGap="" decimalSeparator="" zeroPlaneColor="9999ff" logoURL="" baseFontSize="12" bgAngle="90" baseFontColor="000000" labelHAlign="left" palette="" forceDecimals="1" setAdaptiveYMin="0" canvasBorderAlpha="70" alpha="100" showValue="0" canvasBgAngle="90" animation="1" canvasBgColor="ffffff" canvasBgRatio="0" zeroPlaneThickness="1" showLabels="1" xAxisNamePadding="" outCnvBaseFont="宋体" chartLeftMargin="" legendIconScale="1" bgSWF="0" toolTipBgColor="ffffff" dashed="1" label="" forceYAxisValueDecimals="1" aboutMenuItemLabel="" legendBorderAlpha="100" includeInLegend="1" showLabel="1" yAxisMinValue="0" numberScaleValue="" yAxisValuesPadding="" defaultAnimation="1" canvasLeftMargin="" lineColor="99cc00" formatNumber="0" subCaption="" lineAlpha="70" showVLineLabelBorder="1" lineDashLen="" interactiveLegend="1" showToolTip="1" canvasRightMargin="" legendAllowDrag="1" adjustDiv="1" canvasBorderThickness="2" dashLen="" divLineDashLen="1px" inDecimalSeparator="" trendlines-_-color="bbde64" anchorBorderThickness="1" vDivLineIsDashed="1" showLabelBorder="1" numberSuffix="" reverseLegend="1" endValue="109" toolText="" showAlternateVGridColor="1" alternateHGridColor="f8f8f8" vDivLineDashLen="1px" showDivLineValues="1" showAlternateHGridColor="1" divLineColor="d5d5d5" decimals="0" thousandSeparator="" lineThickness="3" numberPrefix="" valuePadding="" yAxisMaxValue="200" lineDashed="0" color="000000" startValue="1000" legendBgAlpha="100" labelPadding="" yAxisNamePadding="" yAxisValuesStep="" anchorSides="8" formatNumberScale="1" zeroPlaneAlpha="100" canvasPadding="" seriesName="" bgColor="f3f3f3" legendNumColumns="0" showAboutMenuItem="1" numberScaleUnit="" canvasBgAlpha="100" displayValue="target" logoLink="" linePosition="" captionPadding="" labelVAlign="top" alternateHGridAlpha="60" thickness="2" baseFont="Arial" borderColor="666666" chartTopMargin="" useEllipsesWhenOverflow="1" borderThickness="1" legendScrollBgColor="ffcccc" showToolTipShadow="0" showLimits="1" yAxisNameWidth="" bgRatio="2" rotateValues="1" borderAlpha="100" fontSize="12" logoScale="0" staggerLines="" yAxisName="" bgSWFAlpha="0" legendPosition="BOTTOM" legendScrollBtnColor="ccffcc" legendPadding="" showOnTop="1" divLineIsDashed="0" inThousandSeparator="" vDivLineDashGap="0" chartRightMargin="" labelStep="" paletteColors="" value="2" outCnvBaseFontSize="12" vDivLineColor="cccccc" slantLabels="0" canvasBorderColor="393939" legendCaption="" showValues="0" aboutMenuItemLink="" clickURL="" anchorRadius="4" caption="多线图" rotateLabels="0" drawAnchors="1" vDivLineAlpha="100" valuePosition="auto" toolTipSepChar="," font="宋体" logoAlpha="0" numDivLines="4" showZeroPlane="1" logoPosition="" seryColors="[-5121288,-541424]" rotateYAxisName="1" labelDisplay="" showShadow="1" bgAlpha="100" alternateVGridColor="9999ff" showBorder="0" anchorBorderColor="" valueOnRight="1" divLineAlpha="70" anchorBgColor="ffffff" anchorBgAlpha="100" legendBgColor="ffffff" anchorAlpha="100" divLineThickness="2" labelPosition="" canvasBottomMargin="" showLegend="1" alternateVGridAlpha="100" isTrendZone="1" legendBorderColor="000000" showYAxisValues="0" divLineDashGap="0" link="" chartBottomMargin="" legendBorderThickness="1" dashGap="" seriesNameInToolTip="1" legendShadow="1" legendScrollBarColor="ccccff" outCnvBaseFontColor="000000" toolTipBorderColor="000000" vDivLineThickness="1" fontColor="000000" minimiseWrappingInLegend="1" defaultNumberScale="" xAxisName="货主地区" yAxisValueDecimals="0">
+  <categories fontSize="12" fontColor="000000">
+    <category name="成先生" showLabel="1" />
+    <category name="林丽莉" showLabel="1" />
+    <category name="刘先生" showLabel="1" />
+    <category name="刘小龙" showLabel="1" />
+    <category name="王先生" showLabel="1" />
+    <category name="谢小姐" showLabel="1" />
+    <category name="周先生" showLabel="1" />
+  </categories>
+  <dataset seriesName="1" color="b1daf8">
+    <set value="31.8" />
+    <set value="53.0" />
+    <set value="8.0" />
+    <set value="49.0" />
+    <set value="145.0" />
+    <set value="393.0" />
+    <set value="82.0" />
+  </dataset>
+  <trendlines>
+    <line startvalue="1000" displayValue="target" color="bbde64" thickness="2" />
+  </trendlines>
+</graph>
+

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "微软雅黑";
+  overflow: auto;
+  /*为了去除子元素margin-top的影响*/
+  float: left;
+  /*为了去除子元素margin-top的影响*/
+}
+
+.header {
+  height: 94px;
+  background-image: url(../img/page/headerBg.png);
+  background-repeat: repeat-x;
+}
+
+.header .title {
+  width: 568px;
+  height: 50px;
+  float: left;
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 50px;
+  line-height: 50px;
+  color: #65bbff;
+  margin-top: 20px;
+  background-image: url(../img/page/left_logo.png);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.header .user {
+  float: left;
+  margin-top: 24px;
+}
+
+.header .user .avatar {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.header .user .userInfo {
+  display: inline-block;
+}
+
+.header .user .userInfo .userName {
+  color: #fff;
+}
+
+.header .user .userInfo .xiala {
+  width: 10px;
+  height: 15px;
+  display: inline-block;
+  background-image: url(../img/page/xiala.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.header .user .userInfo .unRead {
+  width: 25px;
+  height: 18px;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  background-image: url(../img/page/tuoyuan.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.header .user .userInfo .userOper {
+  color: #a0b2d6;
+}
+
+.header .user .userInfo .userOper .userSet {
+  cursor: pointer;
+}
+
+.header .user .userInfo .userOper .userQuit {
+  cursor: pointer;
+}
+
+.header .workOper {
+  float: left;
+  margin-left: 20px;
+  margin-top: 17px;
+}
+
+.header .workOper .oper {
+  float: left;
+  height: 60px;
+  margin-right: 10px;
+  position: relative;
+  color: #fff;
+  font-size: 16px;
+  line-height: 60px;
+  text-indent: 14px;
+  cursor: pointer;
+}
+
+.header .workOper .oper .itemNumber {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  line-height: 32px;
+  text-indent: 0;
+  text-align: center;
+  background-image: url(../img/page/whiteCircle.png);
+  background-repeat: no-repeat;
+  font-size: 18px;
+}
+
+.header .workOper .oper1 {
+  width: 114px;
+  background-image: url(../img/page/colorBlock1.png);
+}
+
+.header .workOper .oper1 .itemNumber {
+  color: #deb409;
+}
+
+.header .workOper .oper2 {
+  width: 114px;
+  background-image: url(../img/page/colorBlock2.png);
+}
+
+.header .workOper .oper2 .itemNumber {
+  color: #00d3d5;
+}
+
+.header .workOper .oper3 {
+  width: 129px;
+  background-image: url(../img/page/colorBlock3.png);
+}
+
+.header .workOper .oper3 .itemNumber {
+  color: #e97708;
+}
+
+.header .workOper .oper4 {
+  width: 129px;
+  background-image: url(../img/page/colorBlock4.png);
+}
+
+.header .workOper .oper4 .itemNumber {
+  color: #0d9eff;
+}

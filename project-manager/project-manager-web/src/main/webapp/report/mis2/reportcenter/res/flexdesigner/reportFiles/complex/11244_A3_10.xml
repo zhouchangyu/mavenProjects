@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph anchorBgAlpha="100" legendBgAlpha="100" displayValue="target" legendPosition="BOTTOM" legendPadding="" legendScrollBgColor="ffcccc" anchorRadius="3" sNumberScaleUnit="" showValues="0" anchorBorderThickness="1" toolTipBgColor="ffffff" SYAXisName="销售数量" sDefaultNumberScale="" showAboutMenuItem="1" bgSWFAlpha="0" forceDecimals="1" plotSpacePercent="10%" canvasBgAlpha="100" showLabels="1" PYAxisMinValue="" rotateLabels="0" legendBorderAlpha="100" animation="1" anchorBorderColor="" canvasBgColor="f3f3f3" showDivLineSecondaryValue="1" thickness="0" toolText="" xAxisNamePadding="" sFormatNumber="1" paletteColors="" showToolTipShadow="0" canvasBaseColor="f3f3f3" canvasRightMargin="" isTrendZone="1" outCnvBaseFontColor="000000" yAxisValuesStep="" showLegend="1" divLineDashLen="1px" legendScrollBarColor="ccccff" fontSize="12" numDivLines="4" link="" overlapColumns="1" linePosition="0.5" showLabel="1" bgColor="ffffff" sNumberScaleValue="" legendBorderColor="999999" PYAxisMaxValue="" plotBorderColor="9999ff" lineAlpha="80" yAxisValuesPadding="" drawAnchors="1" logoLink="" alpha="100" showCanvasBase="1" zeroPlaneShowBorder="1" formatNumber="1" baseFontSize="12" baseFontColor="000000" divLineThickness="1" borderAlpha="100" connectNullData="0" showValue="0" label="" sYAxisValueDecimals="0" thousandSeparator="" chartLeftMargin="" primaryAxisOnLeft="1" slantLabels="0" showLabelBorder="1" includeInLegend="1" divLineColor="cccccc" showToolTip="1" xAxisName="货主地区" anchorSides="8" use3DLighting="1" forceYAxisValueDecimals="1" showBorder="0" seriesName="" legendCaption="" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" inDecimalSeparator="" showYAxisValues="0" legendBgColor="f3f3f3" palette="" zeroPlaneBorderColor="9999ff" showShadow="0" bgAngle="0" lineDashed="0" decimals="0" PYAxisNameWidth="" aboutMenuItemLink="" numberPrefix="" lineDashLen="" labelStep="" bgRatio="4" subCaption="" legendScrollBtnColor="ccffcc" showSecondaryLimits="1" logoURL="" PYAxisName="成本价格" bgSWF="0" zeroPlaneColor="9999ff" decimalSeparator="" font="宋体" dashLen="" divLineDashGap="0" adjustDiv="0" defaultNumberScale="" sDecimals="0" clickURL="" toolTipBorderColor="000000" plotFillAlpha="180" legendIconScale="1" rotateYAxisName="1" staggerLines="" setAdaptiveYMin="1" rotateValues="1" color="000000" borderColor="666666" yAxisNamePadding="" baseFont="Arial" reverseLegend="1" value="2" canvasTopMargin="" showLimits="1" chartTopMargin="" labelVAlign="top" caption="柱线组合图(3D)" valuePadding="" logoAlpha="0" valuePosition="auto" maxColWidth="1" showVLineLabelBorder="1" canvasBottomMargin="" lineDashGap="" SYAxisMaxValue="" interactiveLegend="1" syncAxisLimits="1" logoPosition="" setAdaptiveSYMin="1" parentYAxis="[P,S,S]" useEllipsesWhenOverflow="1" canvasBgDepth="0" sFormatNumberScale="1" trendlines-_-color="bbde64" legendBorderThickness="1" zeroPlaneAlpha="100" sNumberPrefix="" formatNumberScale="0" plotBorderAlpha="100" divLineIsDashed="0" divLineAlpha="100" chartBottomMargin="" borderThickness="" dashGap="" anchorAlpha="100" numberScaleValue="" numberScaleUnit="" canvasBaseDepth="8" canvasLeftMargin="" legendNumColumns="3" labelDisplay="" sNumberSuffix="" logoScale="0" inThousandSeparator="" showDivLineValues="1" forceSYAxisValueDecimals="1" captionPadding="" aboutMenuItemLabel="" labelPosition="" defaultAnimation="1" endValue="1100" anchorBgColor="ffffff" startValue="1000" toolTipSepChar=",," outCnvBaseFont="宋体" lineThickness="2" labelPadding="" use3DLineShift="1" showCanvasBg="1" seriesNameInToolTip="1" fontColor="000000" canvasPadding="5" SYAxisMinValue="" numberSuffix="" minimiseWrappingInLegend="1" SYAxisNameWidth="" legendShadow="1" outCnvBaseFontSize="12" bgAlpha="0" chartRightMargin="" labelHAlign="left" yAxisValueDecimals="0" showPlotBorder="0" dashed="1" legendAllowDrag="1" lineColor="ffff99">
+  <categories fontSize="12" fontColor="000000">
+    <category name="华北" showLabel="1" />
+    <category name="华东" showLabel="1" />
+    <category name="华南" showLabel="1" />
+    <category name="西南" showLabel="1" />
+  </categories>
+  <dataset seriesName="成本价格" parentYAxis="P" color="b1daf8">
+    <set value="33.666666666666664" />
+    <set value="90.4" />
+    <set value="67.0" />
+    <set value="70.9" />
+  </dataset>
+  <dataset seriesName="销售数量" parentYAxis="S" color="f7bd10">
+    <set value="101.0" />
+    <set value="452.0" />
+    <set value="67.0" />
+    <set value="141.8" />
+  </dataset>
+  <trendlines>
+    <line startvalue="1000" displayValue="target" color="bbde64" thickness="0" />
+  </trendlines>
+</graph>
+

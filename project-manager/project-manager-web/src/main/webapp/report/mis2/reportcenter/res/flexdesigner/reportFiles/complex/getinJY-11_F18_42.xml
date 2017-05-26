@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph parentYAxis="S" toolText="" name="" divLineDecimalPrecision="1" showAlternateHGridColor="1" canvasBgAlpha="100" hoverCapBgColor="ffffe1" showhovercap="1" showColumnShadow="0" showOnTop="0" shownames="1" numberPrefix="" divLineAlpha="60" yAxisName="" showName="1" canvasBorderColor="cccccc" alternateHGridAlpha="50" thickness="2" value="" font="微软雅黑" fontSize="12" hoverCapBorderColor="000000" hoverCapSepChar="," bgColor="ffffff" endValue="0" numdivlines="4" dashLen="" startValue="0" showNames="1" decimalPrecision="1" fontColor="000000" VDivLineAlpha="60" showDivLineValue="1" canvasBgColor="ffffff" showValues="0" showBorder="0" divLineThickness="1" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" caption="" thousandSeparator="," canvasBorderThickness="1" dashGap="" subcaption="" baseFontColor="000000" color="000000" showLegend="1" alternateVGridColor="ffffff" baseFontSize="12" VDivlinecolor="4a4a4a" isTrendZone="0" baseFont="微软雅黑" rotateNames="0" seriesName="" showAlternateVGridColor="0" bgAlpha="50" numVDivlines="0" xAxisName="" decimalSeparator="." formatNumberScale="0" dashed="0" trendlines-_-color="bbde64" VDivLineThickness="1" numberSuffix="" legendPosition="RIGHT" alternateHGridColor="f7f7f7" hoverText="" alpha="50" displayValue="" divlinecolor="dfdfdf" exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <categories fontSize="12" fontColor="000000">
+    <category name="全年" showLabel="1" />
+    <category name="YTM" showLabel="1" />
+  </categories>
+  <dataset seriesName="目标" color="b1daf8">
+    <set value="57442.475" />
+    <set value="42108.919" />
+  </dataset>
+  <dataset seriesName="完成情况" color="f7bd10">
+    <set value="39460.4138" />
+    <set value="39460.4138" />
+  </dataset>
+</graph>
+

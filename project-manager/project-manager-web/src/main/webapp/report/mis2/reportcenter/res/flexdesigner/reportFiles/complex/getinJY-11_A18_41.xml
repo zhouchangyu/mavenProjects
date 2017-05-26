@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph decimalSeparator="." legendPosition="RIGHT" numberSuffix="" hoverCapBgColor="ffffe1" name="" divLineDecimalPrecision="1" legendScrollBarColor="ccccff" canvasBgAlpha="100" toolText="" showhovercap="1" showColumnShadow="0" showAlternateHGridColor="1" shownames="1" numberPrefix="" thickness="2" showName="1" showOnTop="0" canvasBorderColor="cccccc" alternateHGridAlpha="50" legendShadow="1" value="" font="微软雅黑" fontSize="12" numdivlines="4" hoverCapSepChar="," interactiveLegend="1" yAxisName="" fontColor="000000" endValue="0" showDivLineValue="1" dashLen="" showValues="0" showNames="1" decimalPrecision="1" bgColor="ffffff" dashGap="" hoverCapBorderColor="000000" startValue="0" reverseLegend="1" legendIconScale="0" showBorder="0" divLineThickness="1" VDivLineAlpha="60" divLineAlpha="60" caption="" canvasBgColor="ffffff" color="000000" canvasBorderThickness="1" subcaption="" baseFontColor="000000" isTrendZone="0" legendNumColumns="4" showLegend="1" alternateVGridColor="ffffff" baseFontSize="12" legendCaption="" VDivlinecolor="4a4a4a" legendBgAlpha="100" legendBgColor="ffffff" numVDivlines="0" rotateNames="0" seriesName="" showAlternateVGridColor="0" legendBorderAlpha="100" legendBorderThickness="1" baseFont="微软雅黑" legendBorderColor="000000" xAxisName="" legendScrollBtnColor="ccffcc" bgAlpha="50" alternateHGridColor="f7f7f7" thousandSeparator="," legendAllowDrag="1" legendScrollBgColor="ffcccc" trendlines-_-color="bbde64" VDivLineThickness="1" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" formatNumberScale="0" dashed="0" minimiseWrappingInLegend="1" parentYAxis="S" hoverText="" alpha="50" displayValue="" divlinecolor="dfdfdf" exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <categories fontSize="12" fontColor="000000">
+    <category name="本月" showLabel="1" />
+    <category name="上月" showLabel="1" />
+  </categories>
+  <dataset seriesName="目标" color="b1daf8">
+    <set value="0.0" />
+    <set value="0.0" />
+  </dataset>
+  <dataset seriesName="完成情况" color="f7bd10">
+    <set value="0.0" />
+    <set value="0.0" />
+  </dataset>
+</graph>
+

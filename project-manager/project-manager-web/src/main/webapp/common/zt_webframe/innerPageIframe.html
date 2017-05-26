@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内页1</title>
+	<link rel="stylesheet" href="dist/css/init.css">
+	<link rel="stylesheet" href="dist/css/innerPageIframe.css">
+</head>
+<body>
+	<div class="title">
+		<div class="titleName">机要文件登记</div>
+		<div class="btns">
+			<input class="btn_default" type="button" value="新建">
+			<input class="btn_default btn_logo" style="background-image: url(dist/img/innerPageIframe/print.png);" type="button" value="打印">
+			<input class="btn_default" type="button" value="保存">
+			<input class="btn_default" type="button" value="取消">
+			<input class="btn btn-info" type="button" value="取消">
+			<input class="btn btn-primary" type="button" value="取消">
+			<input class="btn btn-warning" type="button" value="取消">
+			<input class="btn btn-danger" type="button" value="取消">
+		</div>
+	</div>
+	<div class="content">
+		<table class="tableBlock">
+			<tr>
+				<td>文件类别号</td>
+				<td>
+					<input class="tableInput" type="text">
+					<span class='unNull'>*</span>
+				</td>
+			</tr>
+			<tr>
+				<td>登记时间</td>
+				<td colspan="3">
+					<input class="tableInput" type="text">
+					<span class='unNull'>*</span>
+				</td>
+			</tr>
+			<tr>
+				<td>来文文号</td>
+				<td>
+					<input class="tableInput" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>拟处理意见</td>
+				<td>
+					<textarea class="tableTextarea" name="" id="" cols="15" rows="3"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>文件种类</td>
+				<td>
+					<select class="tableSelect" name="" id="">
+						<option value="">国务院文件</option>
+						<option value="">值班快报</option>
+						<option value="">部委文件</option>
+						<option value="">工作情况交流</option>
+						<option value="">业务通讯</option>
+						<option value="">政务情况交流</option>
+						<option value="">中央纪委文件</option>
+						<option value="">昨日要情</option>
+						<option value="">北京市委市政府文件</option>
+						<option value="">中共中央办公厅文件</option>
+						<option value="">中办快报</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>成文日期</td>
+				<td>
+					<input class="tableInput" type="text">
+				</td>
+				<td>来文份数</td>
+				<td>
+					<input class="tableInput" type="text">
+				</td>
+				<td>登记人</td>
+				<td>
+					<input class="tableInput" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>文件种类</td>
+				<td>
+					<select class="tableSelect" name="" id="">
+						<option value="">国务院文件</option>
+						<option value="">值班快报</option>
+						<option value="">部委文件</option>
+						<option value="">工作情况交流</option>
+						<option value="">业务通讯</option>
+						<option value="">政务情况交流</option>
+						<option value="">中央纪委文件</option>
+						<option value="">昨日要情</option>
+						<option value="">北京市委市政府文件</option>
+						<option value="">中共中央办公厅文件</option>
+						<option value="">中办快报</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>选择省份</td>
+				<td id="linkage">
+					<input id class="tableInput" onkeyup="likeQuery(this.value,'linkage')" type="text">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("body").on("click",".tableInput",function(e){
+			var url = "/teeRelevantDoc/getWhereabouts.action";
+			addPageBox(url,{},"linkage",function(){
+				$(this).next(".pageBox").show();
+			});
+			e.stopPropagation();
+		});
+		$("body").on("blur",".tableInput",function(){
+			// $(this).next(".pageBox").hide();
+		});
+		/*跳转页码*/
+		$("body").on("click",".pageIndexBox .pageIndexList li",function(){
+			var index = $(this).text();
+			/*考虑到一个页面可能有多个相同class的元素，这里使用的是选择临近的分页盒来操作*/
+			$(this).addClass("active").siblings().removeClass("active");
+			$(this).closest('.pageIndexBox').prev(".pageContent").find(".pageBoxList").eq(index-1).show().siblings().hide();
+		});
+		/*单击最后一页*/
+		$("body").on("click",".pageIndexBox .last",function(){
+			var index = $(this).prev(".pageIndexList").find("li:last-child").text();
+			$(this).siblings('.pageIndexList').find("li:last-child").addClass("active").siblings().removeClass("active");
+			$(this).closest('.pageBox').find(".pageBoxList").eq(index).show().siblings().hide();
+		});
+		/*点击第一页*/
+		$("body").on("click",".pageIndexBox .first",function(){
+			var index = $(this).prev(".pageIndexList").find("li:first-child").text();
+			$(this).siblings('.pageIndexList').find("li:first-child").addClass("active").siblings().removeClass("active");
+			$(this).closest('.pageBox').find(".pageBoxList").eq(index).show().siblings().hide();
+		});
+		$("body").click(function(event) {
+			$(".pageBox").hide();
+		});
+		/*$("body").on("click",".pageBox",function(e){
+			e.stopPropagation();
+		});*/
+
+		$("body").on("click",".pageBoxList li",function(e){
+			var text = $(this).text();
+			$(this).closest('td').find(".tableInput").val(text);
+			// $(this).closest('td').find(".pageBox").hide();
+			// var str = updatePageContent(data1);
+			// $(this).closest('td').find(".pageContent").html(str);
+			e.stopPropagation();
+		});
+/*
+	分页
+	参数 url ,
+	参数 para = {
+					page:1,-----传输的页码
+					rows:10-----传输的分页
+				}
+		dom jq元素，页码将显示在改元素下方
+*/
+var _page_url , _page_dom ,timeout;
+
+function addPageBox(url,para,dom,callback){
+if($("#"+dom).find(".tableInput").val() != ''){
+	likeQuery($("#"+dom).find(".tableInput").val());
+	return;
+}
+	para = para || {page:1,rows:10};
+	_page_url = url;
+	_page_dom = dom;
+	ajax_getPage(url,para,function(data){
+		renderPage(data,dom);
+		callback();
+		
+	});
+}
+function renderPage(data,dom){
+	if(data.rows.length == 0){
+		$("#"+dom).find(".pageBox").remove();
+		return;
+	}
+	var arr_content=[],arr_index=[];
+
+	arr_content.push('<div style="display:block" class="pageBox">');
+		arr_content.push('<div class="pageContent">');
+			arr_content.push('<ul class="pageBoxList">');
+	var json = data;
+	var total = data.total;
+	var totalPage = Math.ceil(total/10);
+	/*渲染内容*/
+	var content = json.rows;
+	for(var li in content ){
+		arr_content.push('<li class="level1" level="1" onclick="toNextLevel(this.id)" id="'+content[li].id+'">'+content[li].content+'</li>');
+	}
+	arr_content.push('</ul>');
+	arr_content.push('</div>');
+	/*渲染页码*/
+	arr_content.push('<div class="pageIndexBox">');
+		arr_content.push('<span class="first" onclick="changePage(\'f\','+totalPage+')"><b><<</b></span>');
+		arr_content.push('<ul class="pageIndexList">');
+		for(var i=1;i<=totalPage;i++){
+			arr_content.push('<li onclick="changePage('+i+','+totalPage+')">'+i+'</li>');
+		}
+		arr_content.push('</ul>');
+		arr_content.push('<span class="last" onclick="changePage(\'l\','+totalPage+')"><b>>></b></span>');
+	arr_content.push('</div>');
+	if($("#"+dom).find(".pageBox").length != 0){
+		$("#"+dom).find(".pageBox").remove();
+	}
+	$("#"+dom).append(arr_content.join(""));
+	console.log($("#"+dom).find(".pageBox").length);
+	$("#"+dom).find(".pageBox").show();
+}
+function changePage(index,totalPage){
+	if(index == "f"){
+		index = 0;
+	}else if(index == "l"){
+		index = totalPage;
+	}
+	var para = {
+		page:index,
+		rows:10
+	};
+	ajax_getPage(_page_url,para,function(data){
+		renderPage(data,_page_dom);
+	});
+}
+function ajax_getPage(url,para,callback){
+	$.ajax({
+		url:url,
+		type:"post",
+		data:para,
+		dataType:"json",
+		success:function(data){
+			callback(data);
+		}
+	});
+}
+function toNextLevel(id){
+	var para = {
+		id:id,
+		page:1,
+		rows:10
+	}
+	console.log(para);
+		ajax_getPage(_page_url,para,function(data){
+		renderPage(data,_page_dom);
+	});
+}
+
+function likeQuery(key,dom){
+	var url = "/teeRelevantDoc/getWhereaboutsByLike.action";
+	var para = {
+		key:key
+	};
+	_page_url = url;
+	_page_dom = dom;
+	clearTimeout(timeout);
+	timeout = setTimeout(ajax_key(url,para,function(data){
+		console.log(data);
+		renderPage(data,dom);
+		
+		
+		console.log(12);
+	}),1000);
+}
+
+function ajax_key(url,para,callback){
+	$.ajax({
+		url:url,
+		type:"post",
+		data:para,
+		dataType:"json",
+		success:function(data){
+			callback(data);
+		}
+	})
+}
+	</script>
+</body>
+</html>

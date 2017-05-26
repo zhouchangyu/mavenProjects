@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph fontSize="12" formatNumberScale="0" fontColor="000000" alternateHGridAlpha="50" dashGap="" seriesName="" numberSuffix="" showBarShadow="0" hDivlinecolor="4a4a4a" thousandSeparator="," name="" toolText="" divLineDecimalPrecision="1" hoverCapBorderColor="000000" decimalPrecision="1" baseFontSize="12" canvasBgAlpha="20" xAxisName="" canvasBorderColor="4a4a4a" divlinecolor="4a4a4a" showOnTop="0" legendPosition="RIGHT" showValues="0" subcaption="" divLineThickness="1" divLineAlpha="20" endValue="0" yAxisName="" alternateVGridAlpha="50" dashLen="" hoverText="" showhovercap="1" numdivlines="4" startValue="0" showLegend="1" value="" bgColor="f3f3f3" hoverCapSepChar="," displayValue="" alternateVGridColor="ebebeb" rotateNames="0" baseFont="微软雅黑" decimalSeparator="." hDivLineThickness="1" bgAlpha="50" parentYAxis="S" shownames="1" caption="" color="000000" numberPrefix="" canvasBorderThickness="2" showName="1" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" trendlines-_-color="bbde64" canvasBgColor="ffffff" isTrendZone="0" baseFontColor="000000" numHDivlines="0" showAlternateHGridColor="0" hoverCapBgColor="ffffe1" showAlternateVGridColor="1" alpha="50" thickness="2" alternateHGridColor="ebebeb" dashed="0" font="微软雅黑" showDivLineValue="1" hDivLineAlpha="60" exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <categories fontSize="12" fontColor="000000">
+    <category name="跨年" showLabel="1" />
+    <category name="当年" showLabel="1" />
+  </categories>
+  <dataset seriesName="逾期" color="b1daf8">
+    <set value="656.9643" />
+    <set value="4729.1098" />
+  </dataset>
+  <dataset seriesName="未逾期" color="f7bd10">
+    <set value="0.0" />
+    <set value="147.755" />
+  </dataset>
+</graph>
+

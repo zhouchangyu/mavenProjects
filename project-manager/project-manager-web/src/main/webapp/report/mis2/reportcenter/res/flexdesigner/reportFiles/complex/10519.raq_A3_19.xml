@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GBK"?>
+<graph canvasBgAlpha="20" seriesName="" baseFontColor="000000" alpha="50" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" xAxisName="货主地区" showValues="0" yAxisName="" dashGap="" fontSize="12" parentYAxis="S" divlinecolor="cfcfcf" thickness="2" toolText="" showNames="1" divLineAlpha="60" divLineThickness="1" name="" divLineDecimalPrecision="1" displayValue="target" font="微软雅黑" showOnTop="0" hDivLineThickness="1" numberPrefix="" canvasBorderColor="4a4a4a" dashed="0" hoverCapBorderColor="000000" showAlternateVGridColor="0" caption="多条图(3D)" alternateVGridAlpha="50" value="" alternateVGridColor="ebebeb" subcaption="" shownames="1" numberSuffix="" showLegend="1" bgColor="ffffff" isTrendZone="0" hDivlinecolor="4a4a4a" endValue="0" startValue="1000" alternateHGridColor="ebebeb" baseFont="微软雅黑" formatNumberScale="0" hoverCapSepChar="," showBarShadow="0" canvasBorderThickness="2" fontColor="000000" numHDivlines="0" showAlternateHGridColor="0" hoverCapBgColor="ffffe1" decimalSeparator="." alternateHGridAlpha="50" trendlines-_-color="bbde64" thousandSeparator="," color="000000" numdivlines="4" hoverText="" rotateNames="0" showhovercap="1" decimalPrecision="1" hDivLineAlpha="60" showName="1" bgAlpha="50" showDivLineValue="1" dashLen="" baseFontSize="12" canvasBgColor="e7eae3">
+  <set name="东北" color="b1daf8" showLabel="1" value="960.0" hoverText="" />
+  <set name="华北" color="f7bd10" showLabel="1" value="10439.0" hoverText="" />
+  <set name="华东" color="8dba06" showLabel="1" value="3734.0" hoverText="" />
+  <set name="华南" color="ff8f48" showLabel="1" value="770.0" hoverText="" />
+  <set name="西南" color="048e91" showLabel="1" value="1591.0" hoverText="" />
+  <trendlines>
+    <line startvalue="1000" displayValue="target" color="bbde64" thickness="2" />
+  </trendlines>
+</graph>
+

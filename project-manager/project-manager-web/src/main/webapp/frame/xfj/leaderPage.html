@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<title>领导首页</title>
+
+	<link rel="stylesheet" href="/common/zt_webframe/dist/css/init.css">
+	<link rel="stylesheet" href="./css/index.css">
+
+	<style type="text/css">
+		html,body{
+			font-family: "微软雅黑";
+		}
+		.header{
+			float: none;
+		}
+		.numberLeft img,.numberRight img{
+			vertical-align: top;
+		}
+		.matters .matter .numberBox{
+			top:6px;
+			top:4px\9;
+		}
+		.container{
+			padding:20px;
+		}
+		.container .containerLeft{
+
+		}
+		.searchBox{
+			margin-bottom:20px;
+		}
+		.searchBox .searchInput{
+			float: left;
+			width:210px;
+			height:34px;
+			line-height: 34px;
+			border:1px solid #f2f2f2;
+			font-size:16px;
+			text-indent: 5px;
+			color:grey;
+			font-family: "微软雅黑";
+		}
+		.searchBox .searchButton{
+			float: left;
+			width:36px;
+			height:36px;
+			cursor: pointer;
+		}
+		.searchBox .severalFun{
+			background-color: rgb(84,168,254);
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			height:36px;
+			padding:0 10px;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+
+		.listBox{
+			background-color: rgb(247,250,255);
+			padding:10px;
+			width:320px;
+			margin-bottom: 20px;
+		}
+		.boxTitle {
+			border-bottom:1px solid #dddedf;
+			overflow: hidden;
+		}
+		.boxTitle .name{
+			background-color:rgb(83,168,254);
+			width: 130px;
+			height: 36px;
+			line-height: 36px;
+			font-size:16px;
+			color: #fff;
+			text-indent: 8px;
+			float: left;
+		}
+		.boxTitle .more{
+			font-size: 14px;
+			float: right;
+			line-height: 36px;
+			color: #0066ff;
+			cursor: pointer;
+		}
+		.itemList .item{
+			line-height:32px;
+			font-size: 14px;
+			padding-left:20px;
+			background-image: url(images/blue.png);
+			background-position: 5px center;
+			background-repeat: no-repeat;
+			cursor: pointer;
+		}
+		.itemList .item a{
+			color:#333;
+		}
+		.itemList .item a:hover{
+			color:#0078ff;
+		}
+		.containerRight{
+			position: absolute;
+		    left: 380px;
+		    right: 20px;
+		    bottom: 20px;
+		    top: 115px;
+		}
+		.containerRight iframe{
+			width:100%;
+			height:100%;
+		}
+	</style>
+</head>
+<body class="ui-layout-container" onload="" >
+<div class="box">
+<!-- header 开始 -->
+	<div class="header clearfix">
+		<span class="bannerBg">
+			<img class="style1" src="images/logoxinfangju.png" style="width:100%;height:100%;max-height:95px;position:absolute;z-index:-1;" alt="" />
+			<img class="style2" src="img/images2/banner.png" style="width:100%;height:100%;max-height:95px;position:absolute;z-index:-1;" alt="" />
+		</span>
+    	<div class="logo fl" id="logo">
+			<img src="img/images2/logoxinfangju.png" style="position:absolute;top:13px;"/>
+        </div>
+		<div class="loginInfo">
+		    <div class="nav clearfix" style="font-size:14px;font-family:微软雅黑;padding:5px 5px 0px 0px;">
+			   	<div class="nav_l fr">
+			       	<div class="clearfix">
+			       		<span>部门：秘书一部</span>
+			       		&nbsp;&nbsp;<span>操作员：张华</span>
+			       		&nbsp;&nbsp;<a href="javascript:void(0);" onclick="addNewTabs('我的桌面', '<%=contextPath %>/system/frame/xfj/main.jsp')">我的桌面</a>
+			       		&nbsp;&nbsp;<a >帮助</a>
+			       		&nbsp;&nbsp;<a href="javascript:void(0);" onclick="addNewTabs('配置', '<%=contextPath %>/system/core/person/setdescktop/')">配置</a>
+			       		&nbsp;&nbsp;<a href="javascript:void(0);" onclick="doLogout();">退出</a>
+			       	</div>
+		       </div>
+		   </div>
+		   <div class="matters" style="">
+		   		<!-- 待办件 开始 -->
+		   		<div class="matter1 matter">
+		   			<a href="javascript:void(0);" onclick="addNewTabs('待办件', '<%=contextPath %>/system/core/commonhandler/index.jsp')">
+						<img class="matter1Bg matterBg" src="img/yellow.png" alt="待办件"/>
+						<span class="matterText" style="color:white;">待办件<span class="forText"></span></span>
+						<div class="numberBox">
+							<span class="numberLeft"><img src="img/numberLeft.png" /></span>
+							<span class="matterNumber" id="workFlow">1</span>
+							<span class="numberRight"><img src="img/numberRight.png" /></span>
+						</div>
+					</a>
+				</div>
+				<!-- 待办件 结束 -->
+				<!-- 待阅件 开始 -->
+				<div class="matter2 matter">
+					<img class="matterBg matterBg" src="img/green.png" alt="待阅件"/>
+					<span class="matterText">待阅件<span class="forText"></span></span>
+					<div class="numberBox">
+						<span class="numberLeft"><img src="img/numberLeft.png" alt="" /></span>
+						<span class="matterNumber">2</span>
+						<span class="numberRight"><img src="img/numberRight.png" alt="" /></span>
+					</div>
+				</div>
+				<!-- 待阅件 结束 -->
+				<!-- 消息提醒 开始 -->
+				<div class="matter3 matter">
+					<a href="javascript:void(0);" onclick="addNewTabs('消息提醒', '<%=contextPath %>/system/core/sms/index.jsp')">
+						<img class="matter3Bg matterBg" src="img/orange.png" alt="消息提醒"/>
+						<span class="matterText" style="color:white;">消息提醒<span class="forText"></span></span>
+						<div class="numberBox">
+							<span class="numberLeft"><img src="img/numberLeft.png" alt="" /></span>
+							<span class="matterNumber" id="smsCount">3</span>
+							<span class="numberRight"><img src="img/numberRight.png" alt="" /></span>
+						</div>
+					</a>
+				</div>
+				<!-- 消息提醒 结束 -->
+				<!-- 电子邮件 开始 -->
+				<div class="matter4 matter">
+					<a href="javascript:void(0);" onclick="addNewTabs('电子邮件', '<%=contextPath %>/system/core/email/index.jsp')">
+						<img class="matter4Bg matterBg" src="img/darkBlue.png" alt="电子邮件"/>
+						<span class="matterText" style="color:white;">电子邮件<span class="forText"></span></span>
+						<div class="numberBox">
+							<span class="numberLeft"><img src="img/numberLeft.png" alt="" /></span>
+							<span class="matterNumber" id="emailCount">4</span>
+							<span class="numberRight"><img src="img/numberRight.png" alt="" /></span>
+						</div>
+					</a>
+				</div>
+				<!-- 电子邮件 结束 -->
+		   </div>
+		</div>
+   </div>
+   <!-- header 结束 -->
+   <!-- content 开始 -->
+    <div class="container clearfix">
+		<div class="containerLeft fl">
+			<div class="searchBox">
+				<input class="searchInput" type="text" value="请输入查询信息" onfocus="if(this.value=='请输入查询信息')this.value='';" onblur="if(this.value=='')this.value='请输入查询信息';" />
+				<span class="searchButton"><img src="images/icon_search.png" alt="" /></span>
+				<input class="severalFun" type="button" value="常用功能" />
+			</div>
+			<div class="newList">
+				<div class="listBox">
+					<div class="boxTitle">
+						<div class="name">领导事务安排</div>
+						<div class="more">更多>></div>
+					</div>
+					<ul class="itemList">
+						<li class="item"><a href="http://www.baidu.com">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+					</ul>
+				</div>
+				<div class="listBox">
+					<div class="boxTitle">
+						<div class="name">领导事务安排</div>
+						<div class="more">更多>></div>
+					</div>
+					<ul class="itemList">
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+						<li class="item"><a href="">参加“一带一路”主题会议，对会议中心思想进行总结并发表演讲</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="containerRight fl">
+
+			<div class="iframeBlock">
+				<iframe src="" frameborder="0"></iframe>
+			</div>
+		</div>
+    </div>
+</div>
+<script src="/common/js/jquery-1.11.0.min.js"></script>
+<script>
+	$(".item").each(function(index, el) {
+		if($(this).text().length >= 20){
+			var data = $(this).find("a").text().substr(0,20) + "...";
+			$(this).find("a").text(data);
+		}
+	});
+</script>
+</body>
+</html>

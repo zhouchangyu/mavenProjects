@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph alternateHGridAlpha="50" decimalPrecision="1" showColumnShadow="0" VDivLineThickness="1" xAxisName="" toolText="" showValues="0" numberSuffix="" shownames="1" decimalSeparator="." displayValue="target" exportShowMenuItem="0" canvasBgAlpha="100" exportEnabled="1" dashLen="" thousandSeparator="," exportCallback="fcExportCallback" subcaption="" dashed="0" divlinecolor="4a4a4a" color="999900" trendlines-_-color="bbde64" baseFontSize="12" parentYAxis="S" caption=" 各电站发电量统计" hoverText="" formatNumberScale="0" numberPrefix="" value="" borderAlpha="100" numVDivlines="0" bgColor="e8e8e8" exportAtClient="0" numdivlines="4" showName="1" divLineDecimalPrecision="1" VDivLineAlpha="60" canvasBorderColor="4a4a4a" showAlternateVGridColor="0" thickness="2" hoverCapBgColor="ffffe1" borderThickness="1" alternateVGridColor="ebebeb" exportAction="save" hoverCapSepChar=",生产状态：正常运行。有功：0.9万瓦，无功：0.6万瓦，目前使用量：" yAxisName="" divLineAlpha="60" divLineThickness="1" isTrendZone="0" rotateNames="0" baseFont="微软雅黑" borderColor="666666" alpha="50" showDivLineValue="1" canvasBorderThickness="2" showhovercap="1" endValue="0" baseFontColor="000000" startValue="50" canvasBgColor="ffffff" alternateHGridColor="f8f8f8" showOnTop="0" exportHandler="http://localhost:8078/reportmis/DirectPrintServlet" dashGap="" showBorder="0" VDivlinecolor="4a4a4a" showAlternateHGridColor="1" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" name="" bgAlpha="50" hoverCapBorderColor="000000">
+  <set name="葛洲坝" color="b1daf8" showLabel="1" value="2000.0" hoverText="" />
+  <set name="三峡" color="f7bd10" showLabel="1" value="1350.0" hoverText="" />
+  <set name="向家坝" color="8dba06" showLabel="1" value="1700.0" hoverText="" />
+  <trendlines>
+    <line startvalue="50" displayValue="target" color="bbde64" thickness="2" />
+  </trendlines>
+</graph>
+

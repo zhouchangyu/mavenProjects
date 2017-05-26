@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>国家信访局</title>
+	<link rel="stylesheet" href="dist/css/index.css">
+	<link rel="stylesheet" href="dist/css/init.css">
+</head>
+<body>
+	<div class="header">
+		<img class="headerBg" src="dist/img/index/icon_bgtop.png" alt="">
+		<div class="logo">
+			<img src="dist/img/index/logo1.png" alt="">
+			<img class="logo2" src="dist/img/index/logo2.png" alt="">
+		</div>
+		<div class="loginInfo">
+			<div class="personInfo">
+				<a class="info5" href="">退出</a>
+				<a class="info4" href="">配置</a>
+				<a class="info3" href="">帮助</a>
+				<span class="info2">操作员:<span class="userName">张女士</span></span>
+				<span class="info1">部门:<span class="depart">秘书二处</span></span>
+			</div>
+			<div class="matters">
+				<div class="matter1 matter">
+					<img class="matter1Bg" src="dist/img/index/yellow.png" alt="">
+					<span class="matterText">待办件<span class="forText"></span></span>
+					<span class="matterNumber">1</span>
+				</div>
+				<div class="matter2 matter">
+					<img class="matterBg" src="dist/img/index/green.png" alt="">
+					<span class="matterText">待阅件<span class="forText"></span></span>
+					<span class="matterNumber">2</span>
+				</div>
+				<div class="matter3 matter">
+					<img class="matter3Bg" src="dist/img/index/orange.png" alt="">
+					<span class="matterText">工作提醒<span class="forText"></span></span>
+					<span class="matterNumber">3</span>
+				</div>
+				<div class="matter4 matter">
+					<img class="matter4Bg" src="dist/img/index/blue.png" alt="">
+					<span class="matterText">电子邮件<span class="forText"></span></span>
+					<span class="matterNumber">4</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="sidebar">
+			<div class="active_menulist">
+				<ul class="menuList">
+					<li class="lv_1">
+						工作台
+						<span class="caret-down"></span>
+						<ul class="lv_2_list">
+							<li class="lv_2">机构资料维护</li>
+							<li class="lv_2">值班工作</li>
+							<li hasChild="true" class="lv_2">
+								<span class="caret-right"></span>
+							机要文件管理
+								<ul class="lv_3_list">
+									<li class="lv_3">机要文件登记</li>
+									<li class="lv_3">机要文件借阅</li>
+									<li class="lv_3">分发目录</li>
+									<li class="lv_3">机要文件配置</li>
+								</ul>
+							</li>
+							<li class="lv_2">分析预测阅看</li>
+							<li hasChild="true" class="lv_2">
+								<span class="caret-right"></span>
+								批示管理
+								<ul class="lv_3_list">
+									<li class="lv_3">批示登记</li>
+									<li class="lv_3">批示借阅</li>
+									<li class="lv_3">领导批示整理</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="fixed_menulist">
+				<ul>
+					<li class="menuItem fixed_lv1">
+						待办工作
+						<span class="caret-right"></span>
+					</li>
+					<li class="menuItem fixed_lv1">
+						已办工作
+						<span class="caret-right"></span>
+					</li>
+					<li class="menuItem fixed_lv1">
+						定制报表
+						<span class="caret-right"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainContent">
+			<iframe src="innerPage.html" frameborder="0"></iframe>
+		</div>
+	</div>
+	<script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("body").on("click",".lv_2",function(){
+			if($(this).attr("hasChild")){
+				$(this).find('.lv_3_list').toggle();
+			}
+		});
+	</script>
+</body>
+</html>

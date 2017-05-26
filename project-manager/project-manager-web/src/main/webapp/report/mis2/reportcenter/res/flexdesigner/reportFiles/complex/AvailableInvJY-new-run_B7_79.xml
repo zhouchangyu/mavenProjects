@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph showPercentageInLabel="1" bgAlpha="50" baseFont="微软雅黑" hoverCapBorderColor="000000" formatNumberScale="0" decimalSeparator="." thousandSeparator="," hoverCapBgColor="ffffe1" showPercentageValues="0" color="999900" bgColor="f3f3f3" numberSuffix="" name="" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" slicingDistance="8" decimalPrecision="1" baseFontColor="000000" showValues="1" pieRadius="65" shownames="1" baseFontSize="12" hoverText="" numberPrefix="" pieFillAlpha="100" pieBorderColor="ffffff" pieBorderAlpha="50" isSliced="0" showhovercap="1" value="" alpha="100" pieBorderThickness="0" hoverCapSepChar="," exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.0.218:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <set name="会所" color="b1daf8" showLabel="1" value="0.0" hoverText="" />
+  <set name="车库" color="f7bd10" showLabel="1" value="0.0" hoverText="" />
+  <set name="高层" color="8dba06" showLabel="1" value="0.39726306" hoverText="" />
+  <set name="合院" color="ff8f48" showLabel="1" value="0.07807346" hoverText="" />
+</graph>
+

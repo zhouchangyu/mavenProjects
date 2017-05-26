@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+html{
+	overflow:hidden;
+}
+body {
+  padding: 5px;
+  overflow: auto;
+}
+
+#tab {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-image: url(../img/innerPage/nav.png);
+  background-repeat: repeat-x;
+}
+
+#tab .tabList .tabItem {
+  list-style: none;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 6px;
+  padding-right: 13px;
+  float: left;
+  text-align: center;
+  margin-right: 10px;
+  text-align: left;
+  color: #000;
+  cursor: pointer;
+}
+
+#tab .tabList .tabItem span.tabtext {
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+  font-size: 14px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+#tab .tabList .tabItem.active {
+  background-image: url(../img/innerPage/tab_selected.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+#tab .tabList .tabItem.active span.tabtext {
+  background-color: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+#tabContent {
+  position: absolute;
+  top: 36px;
+  left: 5px;
+  right: 5px;
+  bottom: 0px;
+  background-color: #fff;
+}
+
+#tabContent iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#innerTab {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-image: url(../img/innerPage/nav.png);
+  background-repeat: repeat-x;
+}
+
+#innerTab .innerTabList .innerTabItem {
+  background-repeat: no-repeat;
+  background-position: right top;
+  list-style: none;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 6px;
+  /*padding-right: 13px;*/
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+  text-align: left;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+
+.bgofTab{
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 0;
+}
+
+#innerTab .innerTabList .innerTabItem span.tabtext {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  line-height: 30px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 15px;
+}
+
+#innerTab .innerTabList .innerTabItem.active {
+  background-color: #fff;
+  border:1px solid #93abc7;
+}
+
+#innerTab .innerTabList .innerTabItem.active span.tabtext {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  line-height: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#innerTab .innerTabList .innerTabItem.active .bgofTab{
+  display: none;
+}
+#innerTabContent {
+  position: absolute;
+  /*top: 41px;*/
+  top: 36px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #fff;
+}
+
+#innerTabContent iframe {
+  width: 100%;
+  height: 100%;
+}

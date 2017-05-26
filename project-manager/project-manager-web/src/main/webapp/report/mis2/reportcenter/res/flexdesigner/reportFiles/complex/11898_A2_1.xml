@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph legendBorderThickness="0" fontSize="12" alternateHGridColor="ebebeb" canvasBgColor="ffffff" reverseLegend="1" dashed="0" showOnTop="0" hDivlinecolor="4a4a4a" canvasBorderThickness="0" trendlines-_-color="bbde64" formatNumberScale="0" thickness="2" numHDivlines="0" legendBgColor="ffffff" divLineThickness="1" showhovercap="1" isTrendZone="0" legendShadow="0" legendScrollBtnColor="ccffcc" name="" alternateVGridAlpha="50" showAlternateVGridColor="1" bgColor="ffffff" numdivlines="4" legendBorderColor="ffffff" showName="1" canvasBgAlpha="23" rotateNames="0" baseFontSize="12" legendIconScale="0" fontColor="000000" bgAlpha="50" subcaption="" showBarShadow="0" shownames="1" value="" interactiveLegend="1" divLineAlpha="20" numberSuffix="" hDivLineAlpha="60" seriesName="" numberPrefix="" divLineDecimalPrecision="1" parentYAxis="S" legendBgAlpha="100" toolText="" baseFont="微软雅黑" legendScrollBgColor="ffcccc" yAxisName="" decimalPrecision="1" legendBorderAlpha="100" legendPosition="RIGHT" decimalSeparator="." color="000000" hoverCapBorderColor="000000" dashLen="" font="微软雅黑" showBorder="0" legendNumColumns="4" caption="" minimiseWrappingInLegend="1" showDivLineValue="1" divlinecolor="4a4a4a" showValues="0" thousandSeparator="," legendCaption="" hoverCapSepChar="," hDivLineThickness="1" showLegend="1" showAlternateHGridColor="0" alternateHGridAlpha="50" hoverCapBgColor="ffffe1" legendScrollBarColor="ccccff" endValue="0" canvasBorderColor="cccccc" alternateVGridColor="ebebeb" legendAllowDrag="1" baseFontColor="000000" seryColors="[-5121288,-541424,-7489018,-28856,-16478575,-2601907,-7320944,-10779094,-2964,-16149801,-6221287,-6125120]" dashGap="" startValue="1000" hoverText="" displayValue="target" alpha="50" xAxisName="" exportEnabled="1" exportAtClient="0" exportShowMenuItem="0" exportHandler="http://192.168.1.11:8800/reportmis/DirectPrintServlet" exportAction="save" exportCallback="fcExportCallback">
+  <categories fontSize="12" fontColor="000000">
+    <category name="当年" showLabel="1" />
+    <category name="跨年" showLabel="1" />
+  </categories>
+  <dataset seriesName="逾期" color="b1daf8">
+    <set value="122.0" />
+    <set value="213.0" />
+  </dataset>
+  <dataset seriesName="未逾期" color="f7bd10">
+    <set value="139.0" />
+    <set value="100.0" />
+  </dataset>
+  <trendlines>
+    <line startvalue="1000" displayValue="target" color="bbde64" thickness="2" />
+  </trendlines>
+</graph>
+
