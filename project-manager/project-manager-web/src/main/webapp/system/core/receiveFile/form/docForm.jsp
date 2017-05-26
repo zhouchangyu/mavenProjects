@@ -1,13 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.tianee.oa.core.workflow.flowrun.bean.FlowRunToken"%>
 <%
-	TeePerson loginPerson = (TeePerson)request.getSession().getAttribute(TeeConst.LOGIN_USER);
-	int uuid =loginPerson.getUuid();
 %>
 <%	
-	//从token中获取流程数据
-	FlowRunToken token = new FlowRunToken(request);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,9 +18,9 @@
 <script type="text/javascript" src="<%=contextPath %>/system/core/person/js/person.js"></script>
 <script type="text/javascript" >
 //从token中获取到三个重要数据
-var runId = "<%=token.getRunId()%>";
-var frpSid = "<%=token.getFrpSid()%>";
-var flowId = "<%=token.getFlowId()%>";
+var runId = "";
+var frpSid = "";
+var flowId = "";
 function doInit(){
 	initData();//基础数据
 	showData();//办理情况数据

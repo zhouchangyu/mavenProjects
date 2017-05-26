@@ -1,13 +1,11 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.tianee.oa.core.org.bean.TeePerson" %>
 
 <%
 	String runId = request.getParameter("runId");
 	String frpSid = request.getParameter("frpSid");
 	String flowId = request.getParameter("flowId");
-	TeePerson loginUser = (TeePerson)session.getAttribute(TeeConst.LOGIN_USER);
 %>
 <!DOCTYPE html >
 <html>
@@ -19,8 +17,8 @@
 	var runId = '<%=runId%>';
 	var frpSid = '<%=frpSid%>';
 	var flowId = '<%=flowId%>';
-	var userId = "<%=loginUser.getUuid()%>";
-	var userName = "<%=loginUser.getUserName()%>";
+	var userId = "";
+	var userName = "";
 	function doInit(){
 		//获取当前流程的阅批记录
 		var json = tools.requestJsonRs(contextPath+"/flowRun/getClyjList.action?runId="+runId,{});

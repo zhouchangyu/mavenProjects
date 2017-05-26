@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.tianee.oa.core.org.bean.TeePerson" %>
 
 <%
 	String runId = request.getParameter("runId");
 	String frpSid = request.getParameter("frpSid");
-	TeePerson loginUser = (TeePerson)session.getAttribute(TeeConst.LOGIN_USER);
 %>
 <!DOCTYPE html >
 <html>
@@ -18,7 +16,7 @@
 <script type="text/javascript" charset="UTF-8">
 	var runId = '<%=runId%>';
 	var frpSid = '<%=frpSid%>';
-	var userId = "<%=loginUser.getUuid()%>";
+	var userId = "";
 	function doInit(){
 		
 	}

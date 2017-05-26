@@ -6,8 +6,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <%@ include file="/header/header2.0.jsp" %>
 <%
-	int runId = TeeStringUtil.getInteger(request.getParameter("runId"),0);
-	int frpSid = TeeStringUtil.getInteger(request.getParameter("frpSid"),0);
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/common/js/tabs/demo.css"/>
@@ -20,8 +18,8 @@
 <script type="text/javascript" src="<%=contextPath%>/common/js/tabs/tabs.js"></script>
 <script>
 
-var runId = '<%=runId%>';
-var frpSid = '<%=frpSid%>'
+var runId = '';
+var frpSid = '';
 function doInit(){
 	 textTbody();//展示正文
 	// getRetaltionFile();//展示相关 
