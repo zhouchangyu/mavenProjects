@@ -43,28 +43,27 @@ function getSysCode(codeNo , codeSelectId ){
 function query(){///teeDocType/getAllList.action
 	var params = "";
 	var column =[
-	 			{field:'id',checkbox:true},
-	 			{field:'customerName  ',title : '客户名称'},
-	 			{field:'dataTime     ',title : '日期'},
-	 			{field:'address      ',title : '卸气点\用气单位'},
-	 			{field:'buyTonprice   ',title : '采购吨价'},
-	 			{field:'businessName   ',title : '供应商/承运商'},
-	 			{field:'saleTonPrice   ',title : '销售吨价'},
-	 			{field:'carNum       ',title : '车号'},
-	 			{field:'distance     ',title : '运距（KM)'},
-	 			{field:'price        ',title : '单价'},
-	 			{field:'freight      ',title : '运费'},
-	 			{field:'putInAmount  ',title : '装车量'},
-	 			{field:'putOutAmount ',title : '卸车量'},
-	 			{field:'endAmount    ',title : '结算量'},
-	 			{field:'totalBuy     ',title : '采购合计'},
-	 			{field:'totalSale    ',title : '销售合计'},
-	 			{field:'backPayment  ',title : '已回款'},
-	 			{field:'sales        ',title : '销售人'},
-	 			{field:'cost         ',title : '成本'},
-	 			{field:'profit       ',title : '利润'},
-	 			{field:'totalProfit ',title : '总利润'},
-
+					{field:'id',checkbox:true},
+					{field:'customername',title : '客户名称',width:100},
+					{field:'datetime',title : '日期',width:100},
+					{field:'address',title : '卸气点\用气单位',width:100},
+					{field:'buytonprice',title : '采购吨价',width:100},
+					{field:'businessname',title : '供应商/承运商',width:100},
+					{field:'saletonprice',title : '销售吨价',width:100},
+					{field:'carnum',title : '车号',width:100},
+					{field:'distance',title : '运距（KM）',width:100},
+					{field:'price',title : '单价',width:100},
+					{field:'freight',title : '运费',width:100},
+					{field:'putinamount',title : '装车量',width:100},
+					{field:'putoutamount',title : '卸车量',width:100},
+					{field:'endamount',title : '结算量',width:100},
+					{field:'totalbuy',title : '采购合计',width:100},
+					{field:'totalsale',title : '销售合计',width:100},
+					{field:'backpayment',title : '已回款',width:100},
+					{field:'sales',title : '销售人',width:100},
+					{field:'cost',title : '成本',width:100},
+					{field:'profit',title : '利润',width:100},
+					{field:'totalprofit',title : '总利润',width:100}
 	 			/* {
 					field : 'STATE',
 					title : '状态',
@@ -80,7 +79,7 @@ function query(){///teeDocType/getAllList.action
 					}
 				} */
 			 ];
-	var url = contextPath+"/teeDocType/getReceiveFileList.action";
+	var url = contextPath+"/maoyi/getList.action";
 	var datagrid = $('#datagrid').datagrid({
 		url : url,
 		toolbar : '#toolbar',
@@ -97,14 +96,10 @@ function query(){///teeDocType/getAllList.action
 		//idField : 'docId',
 		striped: true,
 		remoteSort: true,
-		onDblClickRow: function (rowIndex, rowData) {  
-			var  prc =rowData.STATE;
-			if(prc==1 || prc==2){
-				openFullWindow("/flowRun/toUrl.action?runId="+rowData.RUNID+"&frpSid="+rowData.FRPSID+"&flowId="+rowData.FLOWID,'工作流办理');
-			}else{
-				openFlowRun(rowData.RUNID,rowData.FRPSID);
-			}
-			
+		onDblClickRow: function (rowIndex, rowData) { 
+			insertData(rowData.id)
+			//	openFullWindow("/flowRun/toUrl.action?runId="+rowData.RUNID+"&frpSid="+rowData.FRPSID+"&flowId="+rowData.FLOWID,'工作流办理');
+				//openFlowRun(rowData.RUNID,rowData.FRPSID);
 		},
 		singleSelect:false,
 		pagination : true,
@@ -112,10 +107,10 @@ function query(){///teeDocType/getAllList.action
 	});
 }
 //添加数据
-function insertData(){
+function insertData(id){
 		/* window.openFullWindow("url", "流程办理");
 		window.location.reload(); */
-	var url = "/system/core/managerData/managePage/addOrUpdate.jsp?id=";
+	var url = "/system/core/managerData/managePage/addOrUpdate.jsp?id="+id;
 	bsWindow(url,"添加",{width:"1000",height:"500",submit:function(v,h){
 		if(v=="ok"){
 			var cw = h[0].contentWindow;
@@ -133,26 +128,15 @@ function insertData(){
 function openFlowRun(runid,frpSid){
 	window.openFullWindow(contextPath+"/system/core/receiveFile/descIndex/formTabList.jsp?runId="+runid+"&frpSid="+frpSid+"&view=1", "流程办理");
 }
-//打开流程详情
- function openWorkFlowRun(){
-	var rows = $("#datagrid").datagrid("getSelected");
-	if(rows	==null){
-		alert("请选择相关流程！");
-		return;
-	}
-	var  prc =rows.STATE;
-	if(prc==1 || prc==2){
-		openFullWindow("/flowRun/toUrl.action?runId="+rows.RUNID+"&frpSid="+rows.FRPSID+"&flowId="+rows.FLOWID,'工作流办理');
-	}else{
-		openFlowRun(rowData.RUNID,rowData.FRPSID);
-	}
+function openData(){
+	
 }
 function exportExcel(){
 	var rows = $("#datagrid").datagrid('getSelections');
 	if(rows.length==0){
 		if(confirm("是否确认导出所有查询结果？")){
 			//导出所有的查询结果
-			$("#frame0").attr("src",contextPath+"/teeDocType/exportExcelRece.action");
+			$("#frame0").attr("src",contextPath+"/maoyi/exportExcelRece.action");
 		}else{
 			return;
 		}
@@ -168,18 +152,7 @@ function exportExcel(){
 		$("#frame0").attr("src",contextPath+"/teeDocType/exportExcelRece.action?params="+tools.jsonObj2String(params));
 	}
 }
-//跟踪流程
-function trackWorkFlow(){
-	var rows = $("#datagrid").datagrid('getSelected');
-	if(rows==null){
-		alert("请选择相关流程！");
-		return;
-	}
-	var flowId = rows.FLOWID;
-	var runId = rows.RUNID;
-	var url = contextPath+"/system/core/workflow/flowrun/flowview/index.jsp?runId="+runId+"&flowId="+flowId;
-	openFullWindow(url,"步骤与流程图");
-}
+ 
 //刷新
 function refresh(){
 	location.reload();
@@ -245,7 +218,7 @@ function destory(){
 // }
 </script>
 </head>
-<body onload="doInit();openScanGun();"  fit="true"  onunload="closeScanGun();">
+<body onload="doInit();"  fit="true" >
 	<table id="datagrid" fit="true"></table>
 	<div id="toolbar">
 	<div class="title">
@@ -253,7 +226,7 @@ function destory(){
 			<div class="btns">
 				<input class="btn_default" onclick="insertData();" type="button" value="录入" />
 				<input class="btn_default" onclick="send()" type="button" value="修改" />
-				<input class="btn_default" onclick="send()" type="button" value="打开" />
+				<input class="btn_default" onclick="openData()" type="button" value="打开" />
 				<input class="btn btn-danger" onclick="destory()" type="button" value="删除" />
 				<input class="btn_default" onclick="refresh();" type="button" value="刷新" />
 				<input class="btn_default" onclick="doSearch()" type="button" value="查询" />
@@ -290,50 +263,6 @@ function destory(){
 	</form>
 		</div>
 	<iframe id="frame0" style="display:none"></iframe>
-
-<!-- 扫描枪的Obejct引入 -->
-<OBJECT id="ScanGun" name="ScanGun" style="WIDTH: 0px; HEIGHT: 0px" classid="clsid:D2447A11-9DE8-40B9-AB8B-7566185FF08D"></OBJECT>
-<script language="javascript" for="ScanGun" event="BarcodeComing(code)">
-	var BarNo = document.getElementById("ScanGun").BarNo;//条码号
-	var SendDept = document.getElementById("ScanGun").SendDept; //发文单位
-	var FileName = document.getElementById("ScanGun").FileName; //文种
-	var FileNum = document.getElementById("ScanGun").FileNum; //文号
-	var MainSendDept = document.getElementById("ScanGun").MainSendDept;//主送单位
-	var Title = document.getElementById("ScanGun").Title;  //标题
-	var Secret = document.getElementById("ScanGun").Secret;  //密级
-	var Hurry = document.getElementById("ScanGun").Hurry;  //紧急程度
-	var CreateFileDate = document.getElementById("ScanGun").CreateFileDate;//条码创建时间
-	var SendDegree = document.getElementById("ScanGun").SendDegree;  //发送级别
-	var BarCreateDept = document.getElementById("ScanGun").BarCreateDept;  //条码创建级别
-	var Other = document.getElementById("ScanGun").Other;  //其他数据
-	
-	var spFileNum = SpligFileNum(FileNum);
-	
-	var params={fType:39,
-			"DATA_lwbt":Title,
-// 			"DATA_hj":Hurry,
-// 			"DATA_mj":Secret,
-			"DATA_swrq":new Date().format("yyyy-MM-dd"),
-			"DATA_wz":FileName,
-			"DATA_lwdw":SendDept,
-			"DATA_lwzhl":spFileNum[0],
-			"DATA_nf":spFileNum[1],
-			"DATA_rightzh":spFileNum[2],
-			"runName":Title
-			};
-	var url = contextPath + "/flowRun/createNewWork.action";
-	var json = tools.requestJsonRs(url,params);
-	$("#datagrid").datagrid("reload");
-</script>
-<script>
-function openScanGun(){
-	document.getElementById("ScanGun").Port = "Com10";
-	document.getElementById("ScanGun").Open();
-}	
-
-function closeScanGun(){
-	document.getElementById("ScanGun").Close();
-}
-</script>
+ 
 </body>
 </html>

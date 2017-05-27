@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.project.mapper.TbContentDataMapper" >
+  <resultMap id="BaseResultMap" type="com.project.pojo.TbContentData" >
+     <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="customerName" property="customerName" jdbcType="VARCHAR" />
+    <result column="dateTime" property="dateTime" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="buyTonprice" property="buyTonprice" jdbcType="VARCHAR" />
+    <result column="businessName" property="businessName" jdbcType="VARCHAR" />
+    <result column="saleTonPrice" property="saleTonPrice" jdbcType="VARCHAR" />
+	<result column="carNum" property="carNum" jdbcType="VARCHAR" />
+    <result column="distance" property="distance" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="freight" property="freight" jdbcType="VARCHAR" />
+    <result column="putInAmount" property="putInAmount" jdbcType="VARCHAR" />
+    <result column="putOutAmount" property="putOutAmount" jdbcType="VARCHAR" />
+	<result column="endAmount" property="endAmount" jdbcType="VARCHAR" />
+    <result column="totalBuy" property="totalBuy" jdbcType="VARCHAR" />
+    <result column="totalSale" property="totalSale" jdbcType="VARCHAR" />
+    <result column="backPayment" property="backPayment" jdbcType="VARCHAR" />
+    <result column="sales" property="sales" jdbcType="VARCHAR" />
+    <result column="cost" property="cost" jdbcType="VARCHAR" />
+	<result column="profit" property="backPayment" jdbcType="VARCHAR" />
+    <result column="totalProfit" property="sales" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="VARCHAR" />
+    <result column="updated" property="updated" jdbcType="VARCHAR" />
+	<result column="extend1" property="extend1" jdbcType="VARCHAR" />
+	<result column="extend2" property="extend2" jdbcType="VARCHAR" />
+	<result column="extend3" property="extend3" jdbcType="VARCHAR" />
+  </resultMap>
+ 
+  <sql id="Base_Column_List" >
+	id ,customerName,dateTime,address,buyTonprice,businessName,saleTonPrice,carNum ,distance,price ,freight,putInAmount,putOutAmount ,endAmount,totalBuy,totalSale,backPayment,sales ,cost,profit,totalProfit ,created,updated ,extend1,extend2,extend3 
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.project.pojo.TbContentData" >
+    select
+    <include refid="Base_Column_List" />
+    from tb_content
+    
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_content
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_content
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.project.pojo.TbContentData" >
+    insert into tb_content (id ,customerName,dateTime,address,buyTonprice,businessName,
+    saleTonPrice,carNum ,distance,price ,freight,putInAmount,putOutAmount ,
+    endAmount,totalBuy,totalSale,backPayment,sales ,cost,profit,totalProfit ,created,updated ,extend1,extend2,extend3 
+	)
+    values (#{id,jdbcType=BIGINT}, #{customerName,jdbcType=VARCHAR}, #{dateTime,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{buyTonprice,jdbcType=VARCHAR}, #{businessName,jdbcType=VARCHAR}, 
+      #{saleTonPrice,jdbcType=VARCHAR}, #{carNum,jdbcType=VARCHAR}, #{distance,jdbcType=TIMESTAMP}, 
+      #{price,jdbcType=VARCHAR}, #{freight,jdbcType=VARCHAR}), 
+      #{putInAmount,jdbcType=VARCHAR}, #{putOutAmount,jdbcType=VARCHAR}, #{endAmount,jdbcType=VARCHAR}, 
+      #{totalBuy,jdbcType=VARCHAR}, #{totalSale,jdbcType=VARCHAR}, #{backPayment,jdbcType=TIMESTAMP}, 
+      #{sales,jdbcType=VARCHAR}, #{cost,jdbcType=VARCHAR}), 
+      #{profit,jdbcType=VARCHAR}, #{totalProfit,jdbcType=VARCHAR}, #{created,jdbcType=VARCHAR}, 
+      #{extend1,jdbcType=VARCHAR}, #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=TIMESTAMP}
+  </insert>
+  <!-- <insert id="insertSelective" parameterType="com.project.pojo.TbContent" >
+    insert into tb_content
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="categoryId != null" >
+        category_id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="subTitle != null" >
+        sub_title,
+      </if>
+      <if test="titleDesc != null" >
+        title_desc,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="pic != null" >
+        pic,
+      </if>
+      <if test="pic2 != null" >
+        pic2,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="updated != null" >
+        updated,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="categoryId != null" >
+        #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null" >
+        #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="titleDesc != null" >
+        #{titleDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null" >
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="pic2 != null" >
+        #{pic2,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated != null" >
+        #{updated,jdbcType=TIMESTAMP},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert> -->
+  <!-- <update id="updateByExampleSelective" parameterType="map" >
+    update tb_content
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.categoryId != null" >
+        category_id = #{record.categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subTitle != null" >
+        sub_title = #{record.subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.titleDesc != null" >
+        title_desc = #{record.titleDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pic != null" >
+        pic = #{record.pic,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pic2 != null" >
+        pic2 = #{record.pic2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.created != null" >
+        created = #{record.created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updated != null" >
+        updated = #{record.updated,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+    </if>
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.project.pojo.TbContent" >
+    update tb_content
+    set category_id = #{categoryId,jdbcType=BIGINT},
+      title = #{title,jdbcType=VARCHAR},
+      sub_title = #{subTitle,jdbcType=VARCHAR},
+      title_desc = #{titleDesc,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      pic2 = #{pic2,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      updated = #{updated,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update> -->
+</mapper>

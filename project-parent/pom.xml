@@ -31,6 +31,12 @@
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+		<!-- poi依赖包 -->
+		<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml</artifactId>
+		<version>3.5-FINAL</version>
+		</dependency>
 			<!-- 时间操作组件 -->
 			<dependency>
 				<groupId>joda-time</groupId>

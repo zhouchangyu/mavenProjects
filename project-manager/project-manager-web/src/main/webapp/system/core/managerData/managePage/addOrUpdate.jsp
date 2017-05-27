@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
+       String id = request.getParameter("id")==null?"":request.getParameter("id");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,13 +16,24 @@
 <script type="text/javascript" src="<%=contextPath %>/common/My97DatePicker/WdatePicker.js"></script>
 <script type="text/javascript" src="<%=contextPath %>/system/core/person/js/person.js"></script>
 <script type="text/javascript">
+var id='<%=id%>';
 function doInit(){
-
+	if(id!=""){
+		$("#id").attr("value",id);
+		showData(id);
+	}
 }
  
+function showData(id){
+	var url = contextPath+"/maoyi/getListById.action?id="+id;
+	var json = tools.requestJsonRs(url,null);
+	if(json.rtState){
+		 bindJsonObj2Cntrl(json.rtData,null);
+	}
+}
 //信访目的
-function showObjective(){
-	var url = contextPath+"/teeRelevantDoc/getDataAndObjective.action";
+function showObjective(id){
+	var url = contextPath+"/teeRelevantDoc/getDataAndObjective.action?id="+id;
 	var json = tools.requestJsonRs(url,null);
 	if(json.rtState){
 		for(var i=0;i<json.rtData.length;i++){
@@ -49,6 +61,29 @@ function showObjective(){
  function doReset(){
 	 document.getElementById("form").reset();
  }
+ /**
+  * 保存
+  */
+ function doSave(){
+ 	if (check()){
+ 		var url = "<%=contextPath%>/maoyi/addOrUpdata.action";
+ 		var para =  tools.formToJson($("#form")) ;
+ 		var jsonRs = tools.requestJsonRs(url,para);
+ 		if(jsonRs.rtState){
+ 			return true;
+ 		}else{
+ 			alert(jsonRs.rtMsg);
+ 		}
+ 	}
+ }
+ function check() {
+		var checkStatus =  $("#form").form('validate'); 
+		if(checkStatus == false ){
+			return checkStatus;
+		}
+		return true;
+		
+	}
 </script>
 </head>
 <body onload="doInit()" style="overflow:auto;"   class="tableBlock"  fit="true">
@@ -59,6 +94,7 @@ function showObjective(){
 	   <tr>
 		    <td >客户名称 </td>
 		    <td class="tableBg">
+		    <input type="hidden" id="id" name="id" />
 		    	<input type="text" name="customername" id="customername" class="tableInput" />
 		    </td>
 		    <td >日期：</td>
@@ -97,24 +133,24 @@ function showObjective(){
 	    </td>
 	   </tr> 
 	   <tr>
-		    <td >单价：</td>
+		    <td >销售单价：</td>
 		    <td class="tableBg">
-				<input type="text" name="price" id="price" class="tableInput"   onClick="WdatePicker()"/>
+				<input type="text" name="price" id="price" class="tableInput"   />
 		    </td>
 		   
 		   <td> 运费 </td>
 		   <td class="tableBg">
-		   		<input type="text" name="freight" id="freight"    class="tableInput" onClick="WdatePicker()"/>
+		   		<input type="text" name="freight" id="freight"    class="tableInput" />
 		   </td>
 	   </tr>
 	   <tr>
 	   		<td >装车量：</td>
 	    	<td class="tableBg">
-				<input type="text" name="putinamount" id="putinamount"  class="tableInput"  onClick="WdatePicker()" />
+				<input type="text" name="putinamount" id="putinamount"  class="tableInput" />
 	   		</td>
 		    <td> 卸车量</td>
 		   	<td class="tableBg">
-		    	<input type="text" name="putoutamount" id="putoutamount"  class="tableInput" onClick="WdatePicker()" />
+		    	<input type="text" name="putoutamount" id="putoutamount"  class="tableInput" />
 		    </td>
 	   </tr>
 	   <tr>
@@ -123,7 +159,7 @@ function showObjective(){
 				<input type="text" name="endamount" id="endamount"  class="tableInput" required="true"  size="20" maxlength="20"  />
 			</td>
 			<td  width="120">采购合计：</td>
-			<td class="tableBg" id="">
+			<td class="tableBg">
 				<select name="totalbuy" id="totalbuy" class="tableSelect"  >
 				 <option></option>
 		   		</select>
@@ -152,29 +188,24 @@ function showObjective(){
 			 <option></option>
 	   		</select>
 			</td>
-		<td >登记人：</td>
-		<td class="tableBg">
-			<input type="text" name="registrant" id="registrant" class="tableInput"  />
-	    </td>
-	    </tr>
-	    <tr>
-		    <td  width="120">成本：</td>
+		 <td  width="120">成本：</td>
 			<td class="tableBg">
 				<input type="text" name="cost" id="cost"  class="tableInput" required="true"  size="20" maxlength="20"  />
 			</td>
+	    </tr>
+	    <tr>
+		    
 			<td  width="120">利润：</td>
 			<td class="tableBg" id="">
 				<select name="profit" id="profit" class="tableSelect"  >
 				 <option></option>
 		   		</select>
 			</td>
-	    </tr>  	
-	 <tr>
-	 	<td  width="120">总利润：</td>
+	    <td  width="120">总利润：</td>
 			<td  class="" id="">
 				<input type="text" name="totalprofit" id="totalprofit"  class="tableInput" required="true"  size="20" maxlength="20"  />
-			</td>
-	 </tr>
+			</td>	
+	    </tr>  
 	 
 	</table>
 	 </form>

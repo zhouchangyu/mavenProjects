@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.project.mapper.TbmaoyiMapper" >
+  <resultMap id="BaseResultMap" type="com.project.pojo.Tbmaoyi" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="customerName" property="customername" jdbcType="VARCHAR" />
+    <result column="dateTime" property="datetime" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="buyTonprice" property="buytonprice" jdbcType="VARCHAR" />
+    <result column="businessName" property="businessname" jdbcType="VARCHAR" />
+    <result column="saleTonPrice" property="saletonprice" jdbcType="VARCHAR" />
+    <result column="carNum" property="carnum" jdbcType="VARCHAR" />
+    <result column="distance" property="distance" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="freight" property="freight" jdbcType="VARCHAR" />
+    <result column="putInAmount" property="putinamount" jdbcType="VARCHAR" />
+    <result column="putOutAmount" property="putoutamount" jdbcType="VARCHAR" />
+    <result column="endAmount" property="endamount" jdbcType="VARCHAR" />
+    <result column="totalBuy" property="totalbuy" jdbcType="VARCHAR" />
+    <result column="totalSale" property="totalsale" jdbcType="VARCHAR" />
+    <result column="backPayment" property="backpayment" jdbcType="VARCHAR" />
+    <result column="sales" property="sales" jdbcType="VARCHAR" />
+    <result column="cost" property="cost" jdbcType="VARCHAR" />
+    <result column="profit" property="profit" jdbcType="VARCHAR" />
+    <result column="totalProfit" property="totalprofit" jdbcType="VARCHAR" />
+    <result column="updated" property="updated" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="VARCHAR" />
+    <result column="extend1" property="extend1" jdbcType="VARCHAR" />
+    <result column="extend2" property="extend2" jdbcType="VARCHAR" />
+    <result column="extend3" property="extend3" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, customerName, dateTime, address, buyTonprice, businessName, saleTonPrice, carNum, 
+    distance, price, freight, putInAmount, putOutAmount, endAmount, totalBuy, totalSale, 
+    backPayment, sales, cost, profit, totalProfit, updated, created, extend1, extend2, 
+    extend3
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.project.pojo.TbmaoyiExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from tbmaoyi
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tbmaoyi
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tbmaoyi
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.project.pojo.TbmaoyiExample" >
+    delete from tbmaoyi
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.project.pojo.Tbmaoyi" >
+    insert into tbmaoyi (id, customerName, dateTime, 
+      address, buyTonprice, businessName, 
+      saleTonPrice, carNum, distance, 
+      price, freight, putInAmount, 
+      putOutAmount, endAmount, totalBuy, 
+      totalSale, backPayment, sales, 
+      cost, profit, totalProfit, 
+      updated, created, extend1, 
+      extend2, extend3)
+    values (#{id,jdbcType=BIGINT}, #{customername,jdbcType=VARCHAR}, #{datetime,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{buytonprice,jdbcType=VARCHAR}, #{businessname,jdbcType=VARCHAR}, 
+      #{saletonprice,jdbcType=VARCHAR}, #{carnum,jdbcType=VARCHAR}, #{distance,jdbcType=VARCHAR}, 
+      #{price,jdbcType=VARCHAR}, #{freight,jdbcType=VARCHAR}, #{putinamount,jdbcType=VARCHAR}, 
+      #{putoutamount,jdbcType=VARCHAR}, #{endamount,jdbcType=VARCHAR}, #{totalbuy,jdbcType=VARCHAR}, 
+      #{totalsale,jdbcType=VARCHAR}, #{backpayment,jdbcType=VARCHAR}, #{sales,jdbcType=VARCHAR}, 
+      #{cost,jdbcType=VARCHAR}, #{profit,jdbcType=VARCHAR}, #{totalprofit,jdbcType=VARCHAR}, 
+      #{updated,jdbcType=VARCHAR}, #{created,jdbcType=VARCHAR}, #{extend1,jdbcType=VARCHAR}, 
+      #{extend2,jdbcType=VARCHAR}, #{extend3,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.project.pojo.Tbmaoyi" >
+    insert into tbmaoyi
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="customername != null" >
+        customerName,
+      </if>
+      <if test="datetime != null" >
+        dateTime,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="buytonprice != null" >
+        buyTonprice,
+      </if>
+      <if test="businessname != null" >
+        businessName,
+      </if>
+      <if test="saletonprice != null" >
+        saleTonPrice,
+      </if>
+      <if test="carnum != null" >
+        carNum,
+      </if>
+      <if test="distance != null" >
+        distance,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="freight != null" >
+        freight,
+      </if>
+      <if test="putinamount != null" >
+        putInAmount,
+      </if>
+      <if test="putoutamount != null" >
+        putOutAmount,
+      </if>
+      <if test="endamount != null" >
+        endAmount,
+      </if>
+      <if test="totalbuy != null" >
+        totalBuy,
+      </if>
+      <if test="totalsale != null" >
+        totalSale,
+      </if>
+      <if test="backpayment != null" >
+        backPayment,
+      </if>
+      <if test="sales != null" >
+        sales,
+      </if>
+      <if test="cost != null" >
+        cost,
+      </if>
+      <if test="profit != null" >
+        profit,
+      </if>
+      <if test="totalprofit != null" >
+        totalProfit,
+      </if>
+      <if test="updated != null" >
+        updated,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="extend1 != null" >
+        extend1,
+      </if>
+      <if test="extend2 != null" >
+        extend2,
+      </if>
+      <if test="extend3 != null" >
+        extend3,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="customername != null" >
+        #{customername,jdbcType=VARCHAR},
+      </if>
+      <if test="datetime != null" >
+        #{datetime,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="buytonprice != null" >
+        #{buytonprice,jdbcType=VARCHAR},
+      </if>
+      <if test="businessname != null" >
+        #{businessname,jdbcType=VARCHAR},
+      </if>
+      <if test="saletonprice != null" >
+        #{saletonprice,jdbcType=VARCHAR},
+      </if>
+      <if test="carnum != null" >
+        #{carnum,jdbcType=VARCHAR},
+      </if>
+      <if test="distance != null" >
+        #{distance,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="freight != null" >
+        #{freight,jdbcType=VARCHAR},
+      </if>
+      <if test="putinamount != null" >
+        #{putinamount,jdbcType=VARCHAR},
+      </if>
+      <if test="putoutamount != null" >
+        #{putoutamount,jdbcType=VARCHAR},
+      </if>
+      <if test="endamount != null" >
+        #{endamount,jdbcType=VARCHAR},
+      </if>
+      <if test="totalbuy != null" >
+        #{totalbuy,jdbcType=VARCHAR},
+      </if>
+      <if test="totalsale != null" >
+        #{totalsale,jdbcType=VARCHAR},
+      </if>
+      <if test="backpayment != null" >
+        #{backpayment,jdbcType=VARCHAR},
+      </if>
+      <if test="sales != null" >
+        #{sales,jdbcType=VARCHAR},
+      </if>
+      <if test="cost != null" >
+        #{cost,jdbcType=VARCHAR},
+      </if>
+      <if test="profit != null" >
+        #{profit,jdbcType=VARCHAR},
+      </if>
+      <if test="totalprofit != null" >
+        #{totalprofit,jdbcType=VARCHAR},
+      </if>
+      <if test="updated != null" >
+        #{updated,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        #{extend3,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.project.pojo.TbmaoyiExample" resultType="java.lang.Integer" >
+    select count(*) from tbmaoyi
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update tbmaoyi
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customername != null" >
+        customerName = #{record.customername,jdbcType=VARCHAR},
+      </if>
+      <if test="record.datetime != null" >
+        dateTime = #{record.datetime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.address != null" >
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.buytonprice != null" >
+        buyTonprice = #{record.buytonprice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.businessname != null" >
+        businessName = #{record.businessname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.saletonprice != null" >
+        saleTonPrice = #{record.saletonprice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.carnum != null" >
+        carNum = #{record.carnum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.distance != null" >
+        distance = #{record.distance,jdbcType=VARCHAR},
+      </if>
+      <if test="record.price != null" >
+        price = #{record.price,jdbcType=VARCHAR},
+      </if>
+      <if test="record.freight != null" >
+        freight = #{record.freight,jdbcType=VARCHAR},
+      </if>
+      <if test="record.putinamount != null" >
+        putInAmount = #{record.putinamount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.putoutamount != null" >
+        putOutAmount = #{record.putoutamount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.endamount != null" >
+        endAmount = #{record.endamount,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalbuy != null" >
+        totalBuy = #{record.totalbuy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalsale != null" >
+        totalSale = #{record.totalsale,jdbcType=VARCHAR},
+      </if>
+      <if test="record.backpayment != null" >
+        backPayment = #{record.backpayment,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sales != null" >
+        sales = #{record.sales,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cost != null" >
+        cost = #{record.cost,jdbcType=VARCHAR},
+      </if>
+      <if test="record.profit != null" >
+        profit = #{record.profit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalprofit != null" >
+        totalProfit = #{record.totalprofit,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updated != null" >
+        updated = #{record.updated,jdbcType=VARCHAR},
+      </if>
+      <if test="record.created != null" >
+        created = #{record.created,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extend1 != null" >
+        extend1 = #{record.extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extend2 != null" >
+        extend2 = #{record.extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.extend3 != null" >
+        extend3 = #{record.extend3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update tbmaoyi
+    set id = #{record.id,jdbcType=BIGINT},
+      customerName = #{record.customername,jdbcType=VARCHAR},
+      dateTime = #{record.datetime,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
+      buyTonprice = #{record.buytonprice,jdbcType=VARCHAR},
+      businessName = #{record.businessname,jdbcType=VARCHAR},
+      saleTonPrice = #{record.saletonprice,jdbcType=VARCHAR},
+      carNum = #{record.carnum,jdbcType=VARCHAR},
+      distance = #{record.distance,jdbcType=VARCHAR},
+      price = #{record.price,jdbcType=VARCHAR},
+      freight = #{record.freight,jdbcType=VARCHAR},
+      putInAmount = #{record.putinamount,jdbcType=VARCHAR},
+      putOutAmount = #{record.putoutamount,jdbcType=VARCHAR},
+      endAmount = #{record.endamount,jdbcType=VARCHAR},
+      totalBuy = #{record.totalbuy,jdbcType=VARCHAR},
+      totalSale = #{record.totalsale,jdbcType=VARCHAR},
+      backPayment = #{record.backpayment,jdbcType=VARCHAR},
+      sales = #{record.sales,jdbcType=VARCHAR},
+      cost = #{record.cost,jdbcType=VARCHAR},
+      profit = #{record.profit,jdbcType=VARCHAR},
+      totalProfit = #{record.totalprofit,jdbcType=VARCHAR},
+      updated = #{record.updated,jdbcType=VARCHAR},
+      created = #{record.created,jdbcType=VARCHAR},
+      extend1 = #{record.extend1,jdbcType=VARCHAR},
+      extend2 = #{record.extend2,jdbcType=VARCHAR},
+      extend3 = #{record.extend3,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.project.pojo.Tbmaoyi" >
+    update tbmaoyi
+    <set >
+      <if test="customername != null" >
+        customerName = #{customername,jdbcType=VARCHAR},
+      </if>
+      <if test="datetime != null" >
+        dateTime = #{datetime,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="buytonprice != null" >
+        buyTonprice = #{buytonprice,jdbcType=VARCHAR},
+      </if>
+      <if test="businessname != null" >
+        businessName = #{businessname,jdbcType=VARCHAR},
+      </if>
+      <if test="saletonprice != null" >
+        saleTonPrice = #{saletonprice,jdbcType=VARCHAR},
+      </if>
+      <if test="carnum != null" >
+        carNum = #{carnum,jdbcType=VARCHAR},
+      </if>
+      <if test="distance != null" >
+        distance = #{distance,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="freight != null" >
+        freight = #{freight,jdbcType=VARCHAR},
+      </if>
+      <if test="putinamount != null" >
+        putInAmount = #{putinamount,jdbcType=VARCHAR},
+      </if>
+      <if test="putoutamount != null" >
+        putOutAmount = #{putoutamount,jdbcType=VARCHAR},
+      </if>
+      <if test="endamount != null" >
+        endAmount = #{endamount,jdbcType=VARCHAR},
+      </if>
+      <if test="totalbuy != null" >
+        totalBuy = #{totalbuy,jdbcType=VARCHAR},
+      </if>
+      <if test="totalsale != null" >
+        totalSale = #{totalsale,jdbcType=VARCHAR},
+      </if>
+      <if test="backpayment != null" >
+        backPayment = #{backpayment,jdbcType=VARCHAR},
+      </if>
+      <if test="sales != null" >
+        sales = #{sales,jdbcType=VARCHAR},
+      </if>
+      <if test="cost != null" >
+        cost = #{cost,jdbcType=VARCHAR},
+      </if>
+      <if test="profit != null" >
+        profit = #{profit,jdbcType=VARCHAR},
+      </if>
+      <if test="totalprofit != null" >
+        totalProfit = #{totalprofit,jdbcType=VARCHAR},
+      </if>
+      <if test="updated != null" >
+        updated = #{updated,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=VARCHAR},
+      </if>
+      <if test="extend1 != null" >
+        extend1 = #{extend1,jdbcType=VARCHAR},
+      </if>
+      <if test="extend2 != null" >
+        extend2 = #{extend2,jdbcType=VARCHAR},
+      </if>
+      <if test="extend3 != null" >
+        extend3 = #{extend3,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.project.pojo.Tbmaoyi" >
+    update tbmaoyi
+    set customerName = #{customername,jdbcType=VARCHAR},
+      dateTime = #{datetime,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      buyTonprice = #{buytonprice,jdbcType=VARCHAR},
+      businessName = #{businessname,jdbcType=VARCHAR},
+      saleTonPrice = #{saletonprice,jdbcType=VARCHAR},
+      carNum = #{carnum,jdbcType=VARCHAR},
+      distance = #{distance,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
+      freight = #{freight,jdbcType=VARCHAR},
+      putInAmount = #{putinamount,jdbcType=VARCHAR},
+      putOutAmount = #{putoutamount,jdbcType=VARCHAR},
+      endAmount = #{endamount,jdbcType=VARCHAR},
+      totalBuy = #{totalbuy,jdbcType=VARCHAR},
+      totalSale = #{totalsale,jdbcType=VARCHAR},
+      backPayment = #{backpayment,jdbcType=VARCHAR},
+      sales = #{sales,jdbcType=VARCHAR},
+      cost = #{cost,jdbcType=VARCHAR},
+      profit = #{profit,jdbcType=VARCHAR},
+      totalProfit = #{totalprofit,jdbcType=VARCHAR},
+      updated = #{updated,jdbcType=VARCHAR},
+      created = #{created,jdbcType=VARCHAR},
+      extend1 = #{extend1,jdbcType=VARCHAR},
+      extend2 = #{extend2,jdbcType=VARCHAR},
+      extend3 = #{extend3,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
