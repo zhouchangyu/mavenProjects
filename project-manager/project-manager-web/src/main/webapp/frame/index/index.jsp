@@ -163,8 +163,8 @@ function  doInit(){
 		addNewTabs("我的桌面","/system/core/docType/index.jsp");
 					});
 	$("#menu-lv2-999381").children('a').bind("click",function(){
-						addNewTabs("文件","/system/core/receiveFile/index.jsp");
-	addNewTabs("日期","/system/core/receiveFile/queryLog.jsp");
+						//addNewTabs("文件","/system/core/receiveFile/index.jsp");
+	addNewTabs("数据维护","/system/core/managerData/index.jsp");
 			});
 	//创建拖动事件
 	$("#queryFrame").draggable();
@@ -446,8 +446,8 @@ function closeAll(){
                             <ul id="menu_list_obj">
                              <li id='menu-lv1-999' class=''><a href='javascript:void(0);' style='margin-top:0;' class='yjcd' title=系统管理><span></span>系统管理 <span class="caret-down"></span><span class="caret-right"></span></a>
                              <ul class='child'  id='menu-lv2-ul-999'>
-                             <li   id='menu-lv2-999380'><a href='javascript:void(0);' class='ejcd' title=系统日志管理><span class="caret-right"></span><span class="caret-down"></span>系统日志管理 </a></li>
-                             <li   id='menu-lv2-999381'><a href='javascript:void(0);' class='ejcd' title=系统日志管理><span class="caret-right"></span><span class="caret-down"></span>系统日志管理 </a></li>
+                             <li   id='menu-lv2-999380'><a href='javascript:void(0);' class='ejcd' title=系统日志管理><span class="caret-right"></span><span class="caret-down"></span>数据管理 </a></li>
+                             <li   id='menu-lv2-999381'><a href='javascript:void(0);' class='ejcd' title=系统日志管理><span class="caret-right"></span><span class="caret-down"></span>表单维护 </a></li>
                              
                              </ul>
                              
