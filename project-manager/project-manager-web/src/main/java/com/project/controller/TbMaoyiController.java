@@ -1,5 +1,7 @@
 package com.project.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.project.common.pojo.ToEasyuiDataGridJson;
 import com.project.common.pojo.ToJson;
+import com.project.common.utils.JsonUtils;
 import com.project.pojo.Tbmaoyi;
 import com.project.pojo.ToDataGridModel;
 import com.project.service.TbMaoyiService;
@@ -59,11 +62,10 @@ public class TbMaoyiController {
 	
 	@RequestMapping("/exportExcelRece")
 	@ResponseBody
-	private ToJson exportExcelRece(HttpServletRequest request,HttpServletResponse reponse){
+	private void exportExcelRece(HttpServletRequest request,HttpServletResponse reponse){
 		String para=request.getParameter("params");
-		//Map<String,String> params = JsonUtils.JsonStr2Map(para);
-		ToJson json =maoYiService.getListById(para,reponse);
-		return json;
+		Map<String,String> params = JsonUtils.JsonStr2Map(para);
+		maoYiService.exportExcel(params,reponse); 
 	}
 }
 

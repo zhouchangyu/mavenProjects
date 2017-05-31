@@ -144,12 +144,12 @@ function exportExcel(){
 		var ids = [];
 		var length=rows.length;
 		for(var i=0;i<rows.length;i++){
-			ids.push(rows[i].RUNID);			
+			ids.push(rows[i].id);			
 		}
 		ids.join('');
 		var params={};
-		params["RUNID"]=ids;
-		$("#frame0").attr("src",contextPath+"/teeDocType/exportExcelRece.action?params="+tools.jsonObj2String(params));
+		params["id"]=ids;
+		$("#frame0").attr("src",contextPath+"/maoyi/exportExcelRece.action?params="+tools.jsonObj2String(params));
 	}
 }
  

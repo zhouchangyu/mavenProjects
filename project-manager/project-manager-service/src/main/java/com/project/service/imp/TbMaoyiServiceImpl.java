@@ -1,6 +1,7 @@
 package com.project.service.imp;
 
 import java.io.OutputStream;
+import java.lang.reflect.Field;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -9,6 +10,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFFont;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +25,8 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.project.common.pojo.ToEasyuiDataGridJson;
 import com.project.common.pojo.ToJson;
+import com.project.common.utils.ToJsonUtil;
+import com.project.common.utils.ToStringUtil;
 import com.project.mapper.TbmaoyiMapper;
 import com.project.pojo.Tbmaoyi;
 import com.project.pojo.TbmaoyiExample;
@@ -67,26 +78,44 @@ public class TbMaoyiServiceImpl implements TbMaoyiService {
 		json.setRtData(maoyi);;
 		return json;
 	}
-	 
-	public <HttpServletResponse> ToJson getListById(String para,HttpServletResponse response) {
+	 @Override
+	public void exportExcel(Map<String,String> param,HttpServletResponse response) {
+		ToJson json = new ToJson();
+		List<Map> lists = new ArrayList<>();
 		TbmaoyiExample example = new TbmaoyiExample();
 		Criteria createCriteria = example.createCriteria();
-		List<Long> list= new ArrayList<>();
-		list.add(Long.parseLong(para));
-		createCriteria.andIdIn(list);
-		List<Tbmaoyi> resultList = mapper.selectByExample(example);
-		exportExcelReceive(response,resultList);
-		return null;
+		List<Tbmaoyi> resultList = null;
+		if(param.isEmpty()){
+			resultList = mapper.selectByExample(example);
+		}else{
+			List<Long> list= new ArrayList<>();
+			String ids = param.get("id").replace("[", "").replace("]", "");
+			String[] split = ids.split(",");
+			for(int i=0;i<split.length;i++){
+				list.add(Long.parseLong(split[i]));
+			}
+			createCriteria.andIdIn(list);
+			resultList = mapper.selectByExample(example);
+		}
+		Map<String, Object> map = null;
+		for(Tbmaoyi tb:resultList){
+			map = new HashMap<String, Object>();
+			map = ToJsonUtil.getObject2Map(tb);
+			lists.add(map);
+		}
+		exportExcelReceive(response,lists);
+		 
 	}
-	public <HttpServletResponse> void exportExcelReceive(HttpServletResponse response,List  resultList) {
+	
+	public void exportExcelReceive(HttpServletResponse response,List  resultList) {
 		// 获取当前时间
 		Calendar c = Calendar.getInstance();
 		String time = "[" + c.get(Calendar.YEAR) + (c.get(Calendar.MONTH) + 1)
 				+ c.get(Calendar.DAY_OF_MONTH) + c.get(Calendar.HOUR_OF_DAY)
 				+ c.get(Calendar.MINUTE) + "]";
 
-		try {
-			HSSFWorkbook wb = new HSSFWorkbook();
+		try { 
+				HSSFWorkbook wb = new HSSFWorkbook();
 			// 第二步，在webbook中添加一个sheet,对应Excel文件中的sheet
 			HSSFSheet sheet = wb.createSheet("拟稿夹列表信息");
 			// 第三步，在sheet中添加表头第0行,注意老版本poi对Excel的行数列数有限制short
@@ -113,49 +142,112 @@ public class TbMaoyiServiceImpl implements TbMaoyiService {
 			style1.setFont(font1);
 
 			HSSFCell cell = row.createCell((short) 0);
-			List<String> head=new ArrayList<String>();
+			List<String> head=new ArrayList<String>(); 
 			// 设置表头
-			cell.setCellValue("标题");
+			cell.setCellValue("客户名称");
 			cell.setCellStyle(style);
 			cell = row.createCell((short) (1));
 					
-			cell.setCellValue("总收文字号");
+			cell.setCellValue("日期");
 			cell.setCellStyle(style);
 			cell = row.createCell((short) (2));
 					
-			cell.setCellValue("文件字号");
+			cell.setCellValue("卸气点\\用气单位");
 			cell.setCellStyle(style);
-			cell = row.createCell((short) (3));
+				cell = row.createCell((short) (3));
 					
-			cell.setCellValue("密级");
+			cell.setCellValue("采购吨价");
 			cell.setCellStyle(style);
 			cell = row.createCell((short) (4));
 			
-			cell.setCellValue("缓急");
+			cell.setCellValue("供应商/承运商");
 			cell.setCellStyle(style);
 			cell = row.createCell((short) (5));
 			
-			cell.setCellValue("登记人");
+			cell.setCellValue("销售吨价");
 			cell.setCellStyle(style);
 			cell = row.createCell((short) (6));
 			
-			cell.setCellValue("登记时间");
+			cell.setCellValue("车号");
 			cell.setCellStyle(style);
 			cell = row.createCell((short) (7));
 			
-			/*cell.setCellValue("登记状态");
+			cell.setCellValue("运距（KM)");
 			cell.setCellStyle(style);
-			cell = row.createCell((short) (8));*/
+			cell = row.createCell((short) (8));
+			cell.setCellValue("销售单价");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (9));
 			
-			head.add("TITLE");
-			head.add("RECEIVEDOCID");
-			head.add("MAINDOCID");
-			head.add("DENSE");
-			head.add("URGENCY");
-			head.add("REGISTENT");
-			head.add("STARTDATE");
+			cell.setCellValue("运费");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (10));
+			
+			cell.setCellValue("装车量");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (11));
+			
+			cell.setCellValue("卸车量");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (12));
+			
+			cell.setCellValue("结算量");
+			cell.setCellStyle(style); 
+			cell = row.createCell((short) (13));
+			
+			cell.setCellValue("卸车量");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (14));
+			
+			cell.setCellValue("采购合计");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (15));
+			
+			cell.setCellValue("销售合计");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (16));
+			
+			cell.setCellValue("已回款");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (17));
+			
+			cell.setCellValue("销售人");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (18));
+			
+			cell.setCellValue("成本");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (19));
+			
+			cell.setCellValue("利润");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (20));
+			
+			cell.setCellValue("总利润");
+			cell.setCellStyle(style);
+			cell = row.createCell((short) (21));
+
+			head.add("customername");
+			head.add("datetime");
+			head.add("address");
+			head.add("buytonprice");
+			head.add("businessname");
+			head.add("saletonprice");
+			head.add("carnum");
+			head.add("distance");
+			head.add("price");
+			head.add("freight");
+			head.add("putinamount");
+			head.add("putoutamount");
+			head.add("endamount");
+			head.add("totalbuy");
+			head.add("totalsale");
+			head.add("backpayment");
+			head.add("sales ");
+			head.add("cost ");
+			head.add("profit");
+			head.add("totalprofit");
 			//head.add("STATE");
-		 
 			// 设置内容
 			Map map=new HashMap();
 			for (int m = 0; m < resultList.size(); m++) {
@@ -163,7 +255,7 @@ public class TbMaoyiServiceImpl implements TbMaoyiService {
                 map=(Map) resultList.get(m);
 				for (int n = 0; n <head.size(); n++) {
 					cell = r.createCell((short) (n));
-					cell.setCellValue(TeeStringUtil.getString(map.get(head.get(n))));
+					cell.setCellValue(ToStringUtil.getString(map.get(head.get(n))));
 					cell.setCellStyle(style1);
 				}
 			}
