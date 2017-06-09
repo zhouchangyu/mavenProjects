@@ -10,8 +10,8 @@ String secUserMem="1";
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录</title>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<script type="text/javascript" src="./style/jquery.cookie.js"></script>
 <script type="text/javascript" src="<%=contextPath %>/common/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="<%=contextPath %>/style/jquery.cookie.js"></script>
 <script type="text/javascript" src="<%=contextPath %>/common/js/tools.js"></script>
 <script type="text/javascript" src="<%=contextPath %>/common/js/sys.js"></script>
 <script type="text/javascript" src="<%=contextPath %>/common/js/sysUtil.js"></script>
@@ -98,9 +98,9 @@ $(function () {
   	
   	//鼠标点击按钮的效果
   	$(".btns input").mouseover(function(){
-  		$(this).css("background-image","url(style/xfj_img/login/btn_keydown.png)");
+  		$(this).css("background-image","url('<%=contextPath %>'/style/xfj_img/login/btn_keydown.png)");
   	}).mouseleave(function(){
-  		$(this).css("background-image","url(style/xfj_img/login/btn.png)");
+  		$(this).css("background-image","url('<%=contextPath %>'/style/xfj_img/login/btn.png)");
   	});
 });
  
@@ -170,7 +170,7 @@ body{
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
 }
 .u_logo{
-	background: url("images/username.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/username.png") no-repeat;
 	padding: 10px 10px;
 	position: absolute;
 	top: 43px;
@@ -178,7 +178,7 @@ body{
 
 }
 .p_logo{
-	background: url("images/password.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/password.png") no-repeat;
 	padding: 10px 10px;
 	position: absolute;
 	top: 12px;
@@ -188,7 +188,7 @@ a{
 	text-decoration: none;
 }
 .tou{
-	background: url("images/tou.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/tou.png") no-repeat;
 	width: 97px;
 	height: 92px;
 	position: absolute;
@@ -196,7 +196,7 @@ a{
 	left: 140px;
 }
 .left_hand{
-	background: url("images/left_hand.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/left_hand.png") no-repeat;
 	width: 32px;
 	height: 37px;
 	position: absolute;
@@ -204,7 +204,7 @@ a{
 	left: 150px;
 }
 .right_hand{
-	background: url("images/right_hand.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/right_hand.png") no-repeat;
 	width: 32px;
 	height: 37px;
 	position: absolute;
@@ -212,7 +212,7 @@ a{
 	right: -64px;
 }
 .initial_left_hand{
-	background: url("images/hand.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/hand.png") no-repeat;
 	width: 30px;
 	height: 20px;
 	position: absolute;
@@ -220,7 +220,7 @@ a{
 	left: 100px;
 }
 .initial_right_hand{
-	background: url("images/hand.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/hand.png") no-repeat;
 	width: 30px;
 	height: 20px;
 	position: absolute;
@@ -228,7 +228,7 @@ a{
 	right: -112px;
 }
 .left_handing{
-	background: url("images/left-handing.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/left-handing.png") no-repeat;
 	width: 30px;
 	height: 20px;
 	position: absolute;
@@ -236,7 +236,7 @@ a{
 	left: 139px;
 }
 .right_handinging{
-	background: url("images/right_handing.png") no-repeat;
+	background: url("<%=contextPath %>/frame/images/right_handing.png") no-repeat;
 	width: 30px;
 	height: 20px;
 	position: absolute;
@@ -249,7 +249,7 @@ a{
 <script type="text/javascript">
 $(function(){
 	//得到焦点
-	$("#password").focus(function(){
+	$("#pwd").focus(function(){
 		$("#left_hand").animate({
 			left: "150",
 			top: " -38"
@@ -268,7 +268,7 @@ $(function(){
 		}}, 2000);
 	});
 	//失去焦点
-	$("#password").blur(function(){
+	$("#pwd").blur(function(){
 		$("#left_hand").attr("class","initial_left_hand");
 		$("#left_hand").attr("style","left:100px;top:-12px;");
 		$("#right_hand").attr("class","initial_right_hand");
